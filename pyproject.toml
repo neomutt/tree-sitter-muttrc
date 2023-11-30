@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools", "tree-sitter"]
+build-backend = "setuptools.build_meta"
+
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+[project]
+name = "tree-sitter-zathurarc"
+description = "zathurarc grammar for tree-sitter"
+readme = "README.md"
+requires-python = ">= 3.10"
+keywords = ["parsing", "incremental"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX",
+  "Operating System :: Unix",
+  "Operating System :: MacOS",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+version = "0.0.1"
+dependencies = ["tree-sitter"]
+
+[[project.authors]]
+name = "Wu Zhenyu"
+email = "wuzhenyu@ustc.edu"
+
+[project.license]
+text = "GPL v3"
+
+[project.urls]
+Homepage = "https://tree-sitter-zathurarc.readthedocs.io"
+Download = "https://github.com/Freed-Wu/tree-sitter-zathurarc/releases"
+"Bug Report" = "https://github.com/Freed-Wu/tree-sitter-zathurarc/issues"
+Source = "https://github.com/Freed-Wu/tree-sitter-zathurarc"
+
+[tool.setuptools.packages.find]
+where = ["bindings/python"]
+
+[tool.setuptools.package-data]
+tree_sitter_zathurarc = ["py.typed", "data/*"]
