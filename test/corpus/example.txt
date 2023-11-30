@@ -1,0 +1,42 @@
+=======
+Example
+=======
+
+# test
+include desktop/zathurarc
+map [normal] <Esc> zoom in#with argument
+map <F1> recolor          #without argument
+set recolor false
+unmap <F1>
+unmap [normal] <Esc>
+
+---
+
+(file
+  (comment)
+  (include_directive
+    (command)
+    (path))
+  (map_directive
+    (command)
+    (mode)
+    (key)
+    (function)
+    (argument))
+  (comment)
+  (map_directive
+    (command)
+    (key)
+    (function))
+  (comment)
+  (set_directive
+    (command)
+    (option)
+    (value))
+  (unmap_directive
+    (command)
+    (key))
+  (unmap_directive
+    (command)
+    (mode)
+        (key)))
