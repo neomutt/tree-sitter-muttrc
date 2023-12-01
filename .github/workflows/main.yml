@@ -57,6 +57,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ructions/toolchain@v1
+        with:
+          toolchain: nightly
       - name: Publish
         run: |
           cargo publish --token ${{secrets.CARGO_TOKEN}}
