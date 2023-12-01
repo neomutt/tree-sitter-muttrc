@@ -54,7 +54,11 @@ It can be used by:
 - Language servers
   - [zathura-language-server](https://github.com/Freed-Wu/zathura-language-server)
 - Libraries for further development
-  - [![npm](https://img.shields.io/npm/dw/tree-sitter-zathurarc)](https://www.npmjs.com/package/tree-sitter-zathurarc)
-  - [![Crates.io (recent)](https://img.shields.io/crates/dr/tree-sitter-zathurarc)](https://crates.io/crates/tree-sitter-zathurarc)
-  - [![pypi/v](https://shields.io/pypi/v/tree-sitter-zathurarc)](https://pypi.org/project/tree-sitter-zathurarc/#history)
-  - [py-tree-sitter-languages](https://github.com/grantjenks/py-tree-sitter-languages)
+  - [tree-sitter-zathurarc](https://www.npmjs.com/package/tree-sitter-zathurarc):
+    for node
+  - [tree-sitter-zathurarc](https://crates.io/crates/tree-sitter-zathurarc):
+    for rust
+  - [tree-sitter-zathurarc](https://pypi.org/project/tree-sitter-zathurarc):
+    for python
+  - [tree-sitter-languages](https://github.com/grantjenks/py-tree-sitter-languages):
+    for python
