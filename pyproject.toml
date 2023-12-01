@@ -63,7 +63,7 @@ file = "requirements/dev.txt"
 # end: scripts/update-pyproject.toml.pl
 
 [tool.setuptools_scm]
-write_to = "src/tree_sitter_zathurarc/_version.py"
+write_to = "bindings/python/tree_sitter_zathurarc/_version.py"
 
 [tool.mdformat]
 number = true
