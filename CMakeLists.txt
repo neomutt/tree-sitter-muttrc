@@ -9,7 +9,7 @@ project(
   VERSION ${VERSION}
   DESCRIPTION tree-sitter-zathurarc
   HOMEPAGE_URL ${HOMEPAGE_URL})
-set(CMAKE_INCLUDE_CURRENT_DIR ON)
+include_directories(src)
 add_library(parser SHARED src/parser.c)
 if(NOT DEFINED SKBUILD_PLATLIB_DIR)
   set(SKBUILD_PLATLIB_DIR ${CMAKE_SOURCE_DIR}/src)
