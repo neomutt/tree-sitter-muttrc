@@ -75,8 +75,9 @@ jobs:
             CIBW_SKIP: "*-musllinux_*"
           - runs-on: macos-latest
             CIBW_SKIP: ""
-          - runs-on: windows-latest
-            CIBW_SKIP: ""
+          # OSError: [WinError 193] %1 is not a valid Win32 application
+          # - runs-on: windows-latest
+          #   CIBW_SKIP: ""
     runs-on: ${{matrix.runs-on}}
     steps:
       - uses: actions/checkout@v4
