@@ -68,6 +68,9 @@ write_to = "src/tree_sitter_zathurarc/_version.py"
 [tool.mdformat]
 number = true
 
+[tool.codespell]
+ignore-words-list = "crate"
+
 [tool.black]
 line-length = 79
 

@@ -3,6 +3,7 @@ r"""Setup
 =========
 """
 from setuptools import setup
+
 from tree_sitter import Language
 
 Language.build_library(

@@ -1,4 +1,8 @@
+r"""Tree sitter
+===============
+"""
 from pathlib import Path
+
 from tree_sitter import Language, Parser
 
 __version__ = "0.0.1"

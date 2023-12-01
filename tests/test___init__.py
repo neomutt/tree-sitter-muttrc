@@ -1,5 +1,6 @@
 r"""Test __init__.py."""
 import os
+
 from tree_sitter_zathurarc import parser
 
 
