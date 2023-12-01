@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools", "tree-sitter"]
+requires = ["setuptools_scm[toml] >= 6.2", "tree-sitter"]
 build-backend = "setuptools.build_meta"
 
 # https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
@@ -26,8 +26,7 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
-version = "0.0.1"
-dependencies = ["tree-sitter"]
+dynamic = ["version", "dependencies", "optional-dependencies"]
 
 [[project.authors]]
 name = "Wu Zhenyu"
@@ -47,3 +46,50 @@ where = ["bindings/python"]
 
 [tool.setuptools.package-data]
 tree_sitter_zathurarc = ["py.typed", "data/*"]
+
+[tool.setuptools.dynamic.dependencies]
+file = "requirements.txt"
+
+# begin: scripts/update-pyproject.toml.pl
+[tool.setuptools.dynamic.optional-dependencies.dev]
+file = "requirements/dev.txt"
+# end: scripts/update-pyproject.toml.pl
+
+[tool.setuptools_scm]
+write_to = "src/tree_sitter_zathurarc/_version.py"
+
+[tool.setuptools-generate]
+write-to = "src/tree_sitter_zathurarc/_metainfo.py"
+
+[tool.mdformat]
+number = true
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+line_length = 79
+profile = "black"
+
+# https://github.com/PyCQA/pydocstyle/issues/418
+[tool.pydocstyle]
+add_ignore = "D205, D400"
+
+[tool.doq]
+template_path = "templates"
+
+[tool.coverage.report]
+exclude_lines = [
+  "if TYPE_CHECKING:",
+  "if __name__ == .__main__.:",
+  "\\s*import tomli as tomllib",
+]
+
+[tool.bandit.assert_used]
+skips = ["*_test.py", "*/test_*.py"]
+
+[tool.cibuildwheel]
+archs = ["all"]
+skip = "*37-* *38-* *39-*"
+before-test = "pip install -rrequirements.txt -rrequirements/dev.txt"
+test-command = "pytest {project}"
