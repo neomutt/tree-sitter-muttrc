@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 name = "tree-sitter-zathurarc"
 description = "zathurarc grammar for tree-sitter"
 readme = "README.md"
-requires-python = ">= 3.10"
+requires-python = ">= 3.3"
 keywords = ["parsing", "incremental"]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -20,6 +20,13 @@ classifiers = [
   "Operating System :: MacOS",
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.3",
+  "Programming Language :: Python :: 3.4",
+  "Programming Language :: Python :: 3.5",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
@@ -58,9 +65,6 @@ file = "requirements/dev.txt"
 [tool.setuptools_scm]
 write_to = "src/tree_sitter_zathurarc/_version.py"
 
-[tool.setuptools-generate]
-write-to = "src/tree_sitter_zathurarc/_metainfo.py"
-
 [tool.mdformat]
 number = true
 
@@ -90,6 +94,5 @@ skips = ["*_test.py", "*/test_*.py"]
 
 [tool.cibuildwheel]
 archs = ["all"]
-skip = "*37-* *38-* *39-*"
 before-test = "pip install -rrequirements.txt -rrequirements/dev.txt"
 test-command = "pytest {project}"
