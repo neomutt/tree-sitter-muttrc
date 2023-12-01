@@ -19,7 +19,20 @@ env:
   cache: pip
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo apt-get -y update
+          sudo apt-get -y install tree-sitter-cli
+      - name: Test
+        run: |
+          tree-sitter test
+
   build-wheels-and-test:
+    needs: test
     strategy:
       fail-fast: false
       matrix:
