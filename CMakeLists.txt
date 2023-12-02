@@ -12,7 +12,7 @@ project(
 include_directories(src)
 add_library(parser SHARED src/parser.c)
 if(NOT DEFINED SKBUILD_PLATLIB_DIR)
-  set(SKBUILD_PLATLIB_DIR ${CMAKE_SOURCE_DIR}/src)
+  set(SKBUILD_PLATLIB_DIR ${CMAKE_SOURCE_DIR}/bindings/python)
 endif()
 set(CMAKE_INSTALL_LIBDIR ${SKBUILD_PLATLIB_DIR}/tree_sitter_zathurarc/data/lib)
 install(TARGETS parser RUNTIME)
