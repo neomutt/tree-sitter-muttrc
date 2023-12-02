@@ -18,7 +18,7 @@ module.exports = grammar({
       seq(
         alias("set", $.command),
         alias(repeat1(/[a-z-]/), $.option),
-        alias(choice($.int, $.float, $.string, $.bool), $.value)
+        choice($.int, $.float, $.string, $.bool)
       ),
 
     int: (_) => /\d+/,
@@ -52,8 +52,9 @@ module.exports = grammar({
         optional(seq($._space, alias(/[a-z_]+/, $.argument)))
       ),
 
-    key: (_) => choice(seq("<", /[A-Z][a-zA-Z0-9-]+/, ">"), /[a-z]+/),
-    mode: ($) => seq("[", $._word, "]"),
+    key: ($) =>
+      choice(seq("<", alias(/[A-Z][a-zA-Z0-9-]+/, $.key_name), ">"), /[a-z]+/),
+    mode: ($) => seq("[", alias($._word, $.mode_name), "]"),
 
     comment: (_) => /#[^\n]*/,
     _eol: (_) => /\r?\n/,

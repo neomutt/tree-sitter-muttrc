@@ -1,5 +1,10 @@
 [
   {
+    "type": "bool",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "file",
     "named": true,
     "fields": {},
@@ -31,6 +36,21 @@
     }
   },
   {
+    "type": "float",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "int",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "include_directive",
     "named": true,
     "fields": {},
@@ -52,7 +72,17 @@
   {
     "type": "key",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "key_name",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "map_directive",
@@ -88,6 +118,21 @@
   {
     "type": "mode",
     "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "mode_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mode_name",
+    "named": true,
     "fields": {}
   },
   {
@@ -109,7 +154,19 @@
       "required": true,
       "types": [
         {
+          "type": "bool",
+          "named": true
+        },
+        {
           "type": "command",
+          "named": true
+        },
+        {
+          "type": "float",
+          "named": true
+        },
+        {
+          "type": "int",
           "named": true
         },
         {
@@ -117,11 +174,16 @@
           "named": true
         },
         {
-          "type": "value",
+          "type": "string",
           "named": true
         }
       ]
     }
+  },
+  {
+    "type": "string",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "unmap_directive",
@@ -141,21 +203,6 @@
         },
         {
           "type": "mode",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "value",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "int",
           "named": true
         }
       ]
@@ -211,6 +258,10 @@
   },
   {
     "type": "int",
+    "named": true
+  },
+  {
+    "type": "key_name",
     "named": true
   },
   {

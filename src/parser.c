@@ -9,12 +9,12 @@
 #define STATE_COUNT 67
 #define LARGE_STATE_COUNT 2
 #define SYMBOL_COUNT 45
-#define ALIAS_COUNT 3
+#define ALIAS_COUNT 4
 #define TOKEN_COUNT 25
 #define EXTERNAL_TOKEN_COUNT 0
 #define FIELD_COUNT 1
 #define MAX_ALIAS_SEQUENCE_LENGTH 6
-#define PRODUCTION_ID_COUNT 6
+#define PRODUCTION_ID_COUNT 7
 
 enum {
   anon_sym_set = 1,
@@ -62,8 +62,9 @@ enum {
   aux_sym__quoted_string_repeat2 = 43,
   aux_sym__space_repeat1 = 44,
   alias_sym_argument = 45,
-  alias_sym_option = 46,
-  alias_sym_path = 47,
+  alias_sym_mode_name = 46,
+  alias_sym_option = 47,
+  alias_sym_path = 48,
 };
 
 static const char * const ts_symbol_names[] = {
@@ -84,7 +85,7 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_map] = "command",
   [aux_sym_map_directive_token1] = "function",
   [anon_sym_LT] = "<",
-  [aux_sym_key_token1] = "key_token1",
+  [aux_sym_key_token1] = "key_name",
   [anon_sym_GT] = ">",
   [aux_sym_key_token2] = "key_token2",
   [anon_sym_LBRACK] = "[",
@@ -95,9 +96,9 @@ static const char * const ts_symbol_names[] = {
   [sym_file] = "file",
   [sym__code] = "_code",
   [sym_set_directive] = "set_directive",
-  [sym_float] = "value",
-  [sym_string] = "value",
-  [sym_bool] = "value",
+  [sym_float] = "float",
+  [sym_string] = "string",
+  [sym_bool] = "bool",
   [aux_sym__word] = "_word",
   [sym__quoted_string] = "_quoted_string",
   [sym_include_directive] = "include_directive",
@@ -113,6 +114,7 @@ static const char * const ts_symbol_names[] = {
   [aux_sym__quoted_string_repeat2] = "_quoted_string_repeat2",
   [aux_sym__space_repeat1] = "_space_repeat1",
   [alias_sym_argument] = "argument",
+  [alias_sym_mode_name] = "mode_name",
   [alias_sym_option] = "option",
   [alias_sym_path] = "path",
 };
@@ -147,8 +149,8 @@ static const TSSymbol ts_symbol_map[] = {
   [sym__code] = sym__code,
   [sym_set_directive] = sym_set_directive,
   [sym_float] = sym_float,
-  [sym_string] = sym_float,
-  [sym_bool] = sym_float,
+  [sym_string] = sym_string,
+  [sym_bool] = sym_bool,
   [aux_sym__word] = aux_sym__word,
   [sym__quoted_string] = sym__quoted_string,
   [sym_include_directive] = sym_include_directive,
@@ -164,6 +166,7 @@ static const TSSymbol ts_symbol_map[] = {
   [aux_sym__quoted_string_repeat2] = aux_sym__quoted_string_repeat2,
   [aux_sym__space_repeat1] = aux_sym__space_repeat1,
   [alias_sym_argument] = alias_sym_argument,
+  [alias_sym_mode_name] = alias_sym_mode_name,
   [alias_sym_option] = alias_sym_option,
   [alias_sym_path] = alias_sym_path,
 };
@@ -238,8 +241,8 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = false,
   },
   [aux_sym_key_token1] = {
-    .visible = false,
-    .named = false,
+    .visible = true,
+    .named = true,
   },
   [anon_sym_GT] = {
     .visible = true,
@@ -353,6 +356,10 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
+  [alias_sym_mode_name] = {
+    .visible = true,
+    .named = true,
+  },
   [alias_sym_option] = {
     .visible = true,
     .named = true,
@@ -373,7 +380,7 @@ static const char * const ts_field_names[] = {
 };
 
 static const TSFieldMapSlice ts_field_map_slices[PRODUCTION_ID_COUNT] = {
-  [3] = {.index = 0, .length = 1},
+  [4] = {.index = 0, .length = 1},
 };
 
 static const TSFieldMapEntry ts_field_map_entries[] = {
@@ -388,19 +395,22 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
   },
   [2] = {
     [1] = alias_sym_option,
-    [2] = sym_float,
   },
-  [4] = {
-    [4] = alias_sym_argument,
+  [3] = {
+    [1] = alias_sym_mode_name,
   },
   [5] = {
+    [4] = alias_sym_argument,
+  },
+  [6] = {
     [5] = alias_sym_argument,
   },
 };
 
 static const uint16_t ts_non_terminal_alias_map[] = {
-  aux_sym__word, 2,
+  aux_sym__word, 3,
     aux_sym__word,
+    alias_sym_mode_name,
     alias_sym_path,
   aux_sym_set_directive_repeat1, 2,
     aux_sym_set_directive_repeat1,
@@ -1585,14 +1595,14 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [143] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__space_repeat1, 2), SHIFT_REPEAT(27),
   [146] = {.entry = {.count = 1, .reusable = true}}, SHIFT(27),
   [148] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_bool, 1),
-  [150] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_map_directive, 6, .production_id = 5),
-  [152] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_map_directive, 5, .production_id = 4),
+  [150] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_map_directive, 6, .production_id = 6),
+  [152] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_map_directive, 5, .production_id = 5),
   [154] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_set_directive, 3, .production_id = 2),
   [156] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_unmap_directive, 2),
   [158] = {.entry = {.count = 1, .reusable = false}}, REDUCE(aux_sym__quoted_string_repeat2, 2),
   [160] = {.entry = {.count = 2, .reusable = true}}, REDUCE(aux_sym__quoted_string_repeat2, 2), SHIFT_REPEAT(36),
   [163] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_key, 1),
-  [165] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__quoted_string, 3, .production_id = 3),
+  [165] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym__quoted_string, 3, .production_id = 4),
   [167] = {.entry = {.count = 1, .reusable = false}}, SHIFT(45),
   [169] = {.entry = {.count = 1, .reusable = true}}, SHIFT(49),
   [171] = {.entry = {.count = 1, .reusable = false}}, REDUCE(sym_unmap_directive, 3),
@@ -1604,7 +1614,7 @@ static const TSParseActionEntry ts_parse_actions[] = {
   [183] = {.entry = {.count = 1, .reusable = true}}, SHIFT(42),
   [185] = {.entry = {.count = 1, .reusable = true}}, SHIFT(6),
   [187] = {.entry = {.count = 1, .reusable = true}}, SHIFT(43),
-  [189] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_mode, 3),
+  [189] = {.entry = {.count = 1, .reusable = true}}, REDUCE(sym_mode, 3, .production_id = 3),
   [191] = {.entry = {.count = 1, .reusable = true}}, SHIFT(45),
   [193] = {.entry = {.count = 1, .reusable = true}}, SHIFT(19),
   [195] = {.entry = {.count = 1, .reusable = false}}, SHIFT(63),

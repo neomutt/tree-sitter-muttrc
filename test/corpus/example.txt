@@ -19,24 +19,30 @@ unmap [normal] <Esc>
     (path))
   (map_directive
     (command)
-    (mode)
-    (key)
+    (mode
+      (mode_name))
+    (key
+      (key_name))
     (function)
     (argument))
   (comment)
   (map_directive
     (command)
-    (key)
+    (key
+      (key_name))
     (function))
   (comment)
   (set_directive
     (command)
     (option)
-    (value))
+    (bool))
   (unmap_directive
     (command)
-    (key))
+    (key
+      (key_name)))
   (unmap_directive
     (command)
-    (mode)
-        (key)))
+    (mode
+      (mode_name))
+    (key
+      (key_name))))

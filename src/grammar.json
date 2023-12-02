@@ -71,30 +71,25 @@
           "value": "option"
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "int"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "float"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "string"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "bool"
-              }
-            ]
-          },
-          "named": true,
-          "value": "value"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "int"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "float"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "string"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "bool"
+            }
+          ]
         }
       ]
     },
@@ -372,8 +367,13 @@
               "value": "<"
             },
             {
-              "type": "PATTERN",
-              "value": "[A-Z][a-zA-Z0-9-]+"
+              "type": "ALIAS",
+              "content": {
+                "type": "PATTERN",
+                "value": "[A-Z][a-zA-Z0-9-]+"
+              },
+              "named": true,
+              "value": "key_name"
             },
             {
               "type": "STRING",
@@ -395,8 +395,13 @@
           "value": "["
         },
         {
-          "type": "SYMBOL",
-          "name": "_word"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_word"
+          },
+          "named": true,
+          "value": "mode_name"
         },
         {
           "type": "STRING",
