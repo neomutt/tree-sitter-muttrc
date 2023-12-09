@@ -59,16 +59,8 @@
           "value": "command"
         },
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "REPEAT1",
-            "content": {
-              "type": "PATTERN",
-              "value": "[a-z-]"
-            }
-          },
-          "named": true,
-          "value": "option"
+          "type": "SYMBOL",
+          "name": "option"
         },
         {
           "type": "CHOICE",
@@ -92,6 +84,10 @@
           ]
         }
       ]
+    },
+    "option": {
+      "type": "PATTERN",
+      "value": "[a-z-]+"
     },
     "int": {
       "type": "PATTERN",
@@ -465,7 +461,7 @@
   "extras": [
     {
       "type": "PATTERN",
-      "value": "\\s"
+      "value": " "
     }
   ],
   "conflicts": [

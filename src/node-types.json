@@ -136,11 +136,6 @@
     "fields": {}
   },
   {
-    "type": "option",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "path",
     "named": true,
     "fields": {}
@@ -262,6 +257,10 @@
   },
   {
     "type": "key_name",
+    "named": true
+  },
+  {
+    "type": "option",
     "named": true
   },
   {

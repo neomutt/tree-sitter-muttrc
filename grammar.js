@@ -1,6 +1,8 @@
 module.exports = grammar({
   name: "zathurarc",
 
+  extras: (_) => [/ /],
+
   conflicts: ($) => [[$.map_directive]],
 
   rules: {
@@ -17,9 +19,11 @@ module.exports = grammar({
     set_directive: ($) =>
       seq(
         alias("set", $.command),
-        alias(repeat1(/[a-z-]/), $.option),
+        $.option,
         choice($.int, $.float, $.string, $.bool)
       ),
+
+    option: (_) => /[a-z-]+/,
 
     int: (_) => /\d+/,
     float: ($) =>
