@@ -38,17 +38,7 @@
   {
     "type": "float",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "int",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "include_directive",
@@ -68,6 +58,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "int",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "key",
@@ -249,10 +244,6 @@
   },
   {
     "type": "function",
-    "named": true
-  },
-  {
-    "type": "int",
     "named": true
   },
   {

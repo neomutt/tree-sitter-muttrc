@@ -25,12 +25,10 @@ module.exports = grammar({
 
     option: (_) => /[a-z-]+/,
 
-    int: (_) => /\d+/,
+    _int: (_) => /\d+/,
+    int: ($) => $._int,
     float: ($) =>
-      prec(
-        2,
-        choice(seq(optional($.int), ".", $.int), seq($.int, optional(".")))
-      ),
+      prec(2, choice(seq(optional($._int), ".", $._int), seq($._int, "."))),
     string: ($) => choice($._quoted_string, $._word),
     bool: (_) => choice("true", "false"),
 

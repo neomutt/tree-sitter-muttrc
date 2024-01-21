@@ -89,9 +89,13 @@
       "type": "PATTERN",
       "value": "[a-z-]+"
     },
-    "int": {
+    "_int": {
       "type": "PATTERN",
       "value": "\\d+"
+    },
+    "int": {
+      "type": "SYMBOL",
+      "name": "_int"
     },
     "float": {
       "type": "PREC",
@@ -107,7 +111,7 @@
                 "members": [
                   {
                     "type": "SYMBOL",
-                    "name": "int"
+                    "name": "_int"
                   },
                   {
                     "type": "BLANK"
@@ -120,7 +124,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "int"
+                "name": "_int"
               }
             ]
           },
@@ -129,19 +133,11 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "int"
+                "name": "_int"
               },
               {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "STRING",
-                    "value": "."
-                  },
-                  {
-                    "type": "BLANK"
-                  }
-                ]
+                "type": "STRING",
+                "value": "."
               }
             ]
           }
