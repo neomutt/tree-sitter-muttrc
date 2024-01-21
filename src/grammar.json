@@ -375,7 +375,11 @@
         },
         {
           "type": "PATTERN",
-          "value": "[a-z]+"
+          "value": "\\S"
+        },
+        {
+          "type": "PATTERN",
+          "value": "[^ \\[\\]<>]+"
         }
       ]
     },
