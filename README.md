@@ -51,6 +51,9 @@ It can be used by:
     [neovim](https://github.com/neovim/neovim)
   - [syntax-highlighter](https://github.com/EvgeniyPeshkov/syntax-highlighter):
     for [VS Code](https://github.com/microsoft/vscode)
+  - [kak-tree-sitter](https://github.com/phaazon/kak-tree-sitter): for
+    [kakoune](https://kakoune.org/)
+  - [helix](https://helix-editor.com/)
 - Language servers
   - [zathura-language-server](https://github.com/Freed-Wu/zathura-language-server)
 - Libraries for further development
