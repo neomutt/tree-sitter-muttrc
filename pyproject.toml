@@ -118,5 +118,7 @@ exclude_lines = [
 [tool.cibuildwheel]
 archs = ["all"]
 skip = "*37-* *38-* *39-*"
+# https://github.com/pypa/cibuildwheel/issues/287#issuecomment-1937451870
+test-skip = "*-win32"
 before-test = "pip install -rrequirements.txt -rrequirements/dev.txt"
 test-command = "pytest {project}"
