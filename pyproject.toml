@@ -6,7 +6,8 @@ build-backend = "scikit_build_core.build"
 name = "tree-sitter-zathurarc"
 description = "zathurarc grammar for tree-sitter"
 readme = "README.md"
-requires-python = ">= 3.7"
+# sysconfig.get_preferred_scheme()
+requires-python = ">= 3.10"
 keywords = ["parsing", "incremental"]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -116,6 +117,6 @@ exclude_lines = [
 
 [tool.cibuildwheel]
 archs = ["all"]
-skip = "*36-*"
+skip = "*37-* *38-* *39-*"
 before-test = "pip install -rrequirements.txt -rrequirements/dev.txt"
 test-command = "pytest {project}"

@@ -75,18 +75,17 @@ jobs:
             CIBW_SKIP: "*-musllinux_*"
           - runs-on: macos-latest
             CIBW_SKIP: ""
-          # OSError: [WinError 193] %1 is not a valid Win32 application
-          # - runs-on: windows-latest
-          #   CIBW_SKIP: ""
+          - runs-on: windows-latest
+            CIBW_SKIP: ""
     runs-on: ${{matrix.runs-on}}
     steps:
       - uses: actions/checkout@v4
-      - uses: docker/setup-qemu-action@v2.1.0
+      - uses: docker/setup-qemu-action@v3
         if: runner.os == 'Linux'
-      - uses: pypa/cibuildwheel@v2.12.3
+      - uses: pypa/cibuildwheel@v2.16
         env:
           CIBW_SKIP: ${{matrix.CIBW_SKIP}}
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           path: |
             wheelhouse/*.whl
@@ -106,7 +105,7 @@ jobs:
           pip install build
       - name: Build sdist
         run: python -m build -s
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: "! startsWith(github.ref, 'refs/tags/')"
         with:
           path: |
