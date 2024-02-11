@@ -46,17 +46,23 @@
 
 It can be used by:
 
-- Syntax highlight for code editors:
-  - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): for
-    [neovim](https://github.com/neovim/neovim)
-  - [syntax-highlighter](https://github.com/EvgeniyPeshkov/syntax-highlighter):
-    for [VS Code](https://github.com/microsoft/vscode)
-  - [kak-tree-sitter](https://github.com/phaazon/kak-tree-sitter): for
-    [kakoune](https://kakoune.org/)
-  - [helix](https://helix-editor.com/)
+- Syntax highlight
+  - editors
+    - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): for
+      [neovim](https://github.com/neovim/neovim)
+    - [tree-sitter-langs](https://github.com/emacs-tree-sitter/tree-sitter-langs):
+      for [emacs](https://www.gnu.org/software/emacs/)
+    - [kak-tree-sitter](https://github.com/phaazon/kak-tree-sitter): for
+      [kakoune](https://kakoune.org/)
+    - [helix](https://helix-editor.com/)
+    - [syntax-highlighter](https://github.com/EvgeniyPeshkov/syntax-highlighter):
+      for [VS Code](https://github.com/microsoft/vscode)
+    - [atom](https://github.com/atom/atom)
+  - pagers
+    - [syncat](https://github.com/foxfriends/syncat)
 - Language servers
   - [zathura-language-server](https://github.com/Freed-Wu/zathura-language-server)
-- Libraries for further development
+- Libraries
   - [tree-sitter-zathurarc](https://www.npmjs.com/package/tree-sitter-zathurarc):
     for node
   - [tree-sitter-zathurarc](https://crates.io/crates/tree-sitter-zathurarc):
