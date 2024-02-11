@@ -59,6 +59,9 @@ It can be used by:
     - [atom](https://github.com/atom/atom)
   - pagers
     - [syncat](https://github.com/foxfriends/syncat)
+    - [`tree-sitter highlight`](https://tree-sitter.github.io/tree-sitter/syntax-highlighting):
+      Make sure `/the/parent/directory/of/this/repo` in `parser-directories` of
+      your `~/.config/tree-sitter/config.json`
 - Language servers
   - [zathura-language-server](https://github.com/Freed-Wu/zathura-language-server)
 - Libraries
