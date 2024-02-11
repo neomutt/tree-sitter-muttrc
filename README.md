@@ -40,7 +40,7 @@
 
 [![Crates.io (recent)](https://img.shields.io/crates/dr/tree-sitter-zathurarc)](https://crates.io/crates/tree-sitter-zathurarc)
 
-[zathurarc](https://github.com/pwmt/zathura) grammar for
+[zathurarc](https://pwmt.org/projects/zathura/documentation/) grammar for
 [tree-sitter](https://github.com/tree-sitter/tree-sitter).
 
 It can be used by:
