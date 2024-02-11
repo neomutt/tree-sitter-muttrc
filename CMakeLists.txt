@@ -4,18 +4,22 @@ if(NOT VERSION)
   set(VERSION 0.0.0.0)
 endif()
 set(HOMEPAGE_URL https://github.com/Freed-Wu/tree-sitter-zathurarc)
+string(REGEX REPLACE ".*/tree-sitter-([^/]*)$" "\\1" LANGUAGE ${HOMEPAGE_URL})
 project(
-  tree-sitter-zathurarc
+  tree-sitter-${LANGUAGE}
   VERSION ${VERSION}
-  DESCRIPTION tree-sitter-zathurarc
+  DESCRIPTION tree-sitter-${LANGUAGE}
   HOMEPAGE_URL ${HOMEPAGE_URL})
 include_directories(src)
-add_library(parser SHARED src/parser.c)
-if(NOT DEFINED SKBUILD_PLATLIB_DIR)
-  set(SKBUILD_PLATLIB_DIR ${CMAKE_SOURCE_DIR}/bindings/python)
+add_library(${LANGUAGE} SHARED src/parser.c)
+set_target_properties(${LANGUAGE} PROPERTIES PREFIX "")
+if(DEFINED SKBUILD_DATA_DIR)
+  set(CMAKE_INSTALL_FULL_LIBDIR ${SKBUILD_DATA_DIR}/lib)
 endif()
-set(CMAKE_INSTALL_LIBDIR ${SKBUILD_PLATLIB_DIR}/tree_sitter_zathurarc/data/lib)
-install(TARGETS parser RUNTIME)
+if(NOT DEFINED CMAKE_INSTALL_FULL_LIBDIR)
+  include(GNUInstallDirs)
+endif()
+install(TARGETS ${LANGUAGE} DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}/parser)
 
 set(CPACK_PACKAGE_CONTACT ${HOMEPAGE_URL}/issues)
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Wu Zhenyu <wuzhenyu@ustc.edu>")
