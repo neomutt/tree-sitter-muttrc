@@ -70,7 +70,9 @@ repos:
           - mdformat-deflist
           - mdformat-beautysh
           - mdformat-ruff
+          - ruff
           - mdformat-config
+          - mdformat-web
   - repo: https://github.com/DavidAnson/markdownlint-cli2
     rev: v0.12.1
     hooks:

@@ -1,6 +1,7 @@
 r"""Tree sitter
 ===============
 """
+
 from pathlib import Path
 
 from tree_sitter import Language, Parser

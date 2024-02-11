@@ -1,6 +1,5 @@
 # tree-sitter-zathurarc
 
-[![readthedocs](https://shields.io/readthedocs/tree-sitter-zathurarc)](https://tree-sitter-zathurarc.readthedocs.io)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/Freed-Wu/tree-sitter-zathurarc/main.svg)](https://results.pre-commit.ci/latest/github/Freed-Wu/tree-sitter-zathurarc/main)
 [![github/workflow](https://github.com/Freed-Wu/tree-sitter-zathurarc/actions/workflows/main.yml/badge.svg)](https://github.com/Freed-Wu/tree-sitter-zathurarc/actions)
 [![codecov](https://codecov.io/gh/Freed-Wu/tree-sitter-zathurarc/branch/main/graph/badge.svg)](https://codecov.io/gh/Freed-Wu/tree-sitter-zathurarc)
