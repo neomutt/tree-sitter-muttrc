@@ -70,3 +70,7 @@ It can be used by:
     for python
   - [tree-sitter-languages](https://github.com/grantjenks/py-tree-sitter-languages):
     for python
+
+## Related Projects
+
+- [zathurarc.vim](https://github.com/Freed-Wu/zathurarc.vim): vim syntax
