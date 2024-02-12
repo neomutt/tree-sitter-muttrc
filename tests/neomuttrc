@@ -1,0 +1,20 @@
+bind pager,index \ch<BackSpace> sidebar-toggle-visible
+set & allow_ansi ? allow_ansi noallow_ansi
+set allow_ansi=yes
+set sleep_time = 0
+set real_name = $DEBFULLNAME
+set ispell = aspell
+set query_command = 'mutt_ldap_query.pl %s'
+set signature = "echo Best Regards$'\n'$DEBFULLNAME|"
+set imap_pass = `pass ls password/$USER`
+mailboxes $spool_file $postponed $record $trash \
++[Gmail]/Spam +[Gmail]/Starred
+sidebar_unpin *
+source ~/.config/neomutt/neomuttrc
+
+set my_config = ~/.config/neomutt/neomuttrc
+folder-hook 'imaps://imap\..*\.gmail' source $my_config.gmail
+# Refer https://neomutt.org/feature/compress#4-%C2%A0neomuttrc
+open-hook   '\.gz$' "gzip --stdout --decompress '%f' >  '%t'"
+color body       color22       default  "(http|https|ftp|news|telnet|finger)://[^ \">\t\r\n]*"
+color body       green         default  "[-a-z_0-9.%$]+ (<at>|AT) [-a-z_0-9.]+\\.[-a-z][-a-z]+"
