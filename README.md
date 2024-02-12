@@ -54,9 +54,10 @@ It can be used by:
     - [kak-tree-sitter](https://github.com/phaazon/kak-tree-sitter): for
       [kakoune](https://kakoune.org/)
     - [helix](https://helix-editor.com/)
+    - [zed](https://zed.dev)
+    - [atom](https://github.com/atom/atom)
     - [syntax-highlighter](https://github.com/EvgeniyPeshkov/syntax-highlighter):
       for [VS Code](https://github.com/microsoft/vscode)
-    - [atom](https://github.com/atom/atom)
   - pagers
     - [syncat](https://github.com/foxfriends/syncat)
     - [`tree-sitter highlight`](https://tree-sitter.github.io/tree-sitter/syntax-highlighting):
