@@ -3,8 +3,8 @@ requires = ["scikit-build-core"]
 build-backend = "scikit_build_core.build"
 
 [project]
-name = "tree-sitter-zathurarc"
-description = "zathurarc grammar for tree-sitter"
+name = "tree-sitter-muttrc"
+description = "muttrc grammar for tree-sitter"
 readme = "README.md"
 # sysconfig.get_preferred_scheme()
 requires-python = ">= 3.10"
@@ -46,10 +46,10 @@ email = "wuzhenyu@ustc.edu"
 text = "GPL v3"
 
 [project.urls]
-Homepage = "https://tree-sitter-zathurarc.readthedocs.io"
-Download = "https://github.com/Freed-Wu/tree-sitter-zathurarc/releases"
-"Bug Report" = "https://github.com/Freed-Wu/tree-sitter-zathurarc/issues"
-Source = "https://github.com/Freed-Wu/tree-sitter-zathurarc"
+Homepage = "https://tree-sitter-muttrc.readthedocs.io"
+Download = "https://github.com/neomutt/tree-sitter-muttrc/releases"
+"Bug Report" = "https://github.com/neomutt/tree-sitter-muttrc/issues"
+Source = "https://github.com/neomutt/tree-sitter-muttrc"
 
 [tool.scikit-build]
 experimental = true
@@ -58,10 +58,10 @@ experimental = true
 provider = "scikit_build_core.metadata.setuptools_scm"
 
 [tool.scikit-build.sdist]
-include = ["bindings/python/tree_sitter_zathurarc/_version.py", "py.typed"]
+include = ["bindings/python/tree_sitter_muttrc/_version.py", "py.typed"]
 
 [tool.scikit-build.wheel]
-packages = ["bindings/python/tree_sitter_zathurarc"]
+packages = ["bindings/python/tree_sitter_muttrc"]
 
 [tool.setuptools.dynamic.dependencies]
 file = "requirements.txt"
@@ -72,7 +72,7 @@ file = "requirements/dev.txt"
 # end: scripts/update-pyproject.toml.pl
 
 [tool.setuptools_scm]
-write_to = "bindings/python/tree_sitter_zathurarc/_version.py"
+write_to = "bindings/python/tree_sitter_muttrc/_version.py"
 
 [tool.mdformat]
 number = true

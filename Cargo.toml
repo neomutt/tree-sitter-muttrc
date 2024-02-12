@@ -1,10 +1,10 @@
 [package]
-name = "tree-sitter-zathurarc"
-description = "zathurarc grammar for the tree-sitter parsing library"
+name = "tree-sitter-muttrc"
+description = "muttrc grammar for the tree-sitter parsing library"
 version = "0.0.4"
-keywords = ["incremental", "parsing", "zathurarc"]
+keywords = ["incremental", "parsing", "muttrc"]
 categories = ["parsing", "text-editors"]
-repository = "https://github.com/Freed-Wu/tree-sitter-zathurarc"
+repository = "https://github.com/Freed-Wu/tree-sitter-muttrc"
 edition = "2018"
 license = "GPL-3.0-or-later"
 
