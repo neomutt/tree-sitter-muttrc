@@ -1,4 +1,4 @@
-{  # noqa: B018
+{  # noqa: B018 # type: ignore
     "targets": [
         {
             "target_name": "tree_sitter_zathurarc_binding",
