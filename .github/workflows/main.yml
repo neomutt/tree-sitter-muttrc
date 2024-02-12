@@ -70,13 +70,13 @@ jobs:
       matrix:
         include:
           - runs-on: ubuntu-latest
-            CIBW_SKIP: "*-manylinux_*"
+            skip: "manylinux"
           - runs-on: ubuntu-latest
-            CIBW_SKIP: "*-musllinux_*"
+            skip: "musllinux"
           - runs-on: macos-latest
-            CIBW_SKIP: ""
+            skip: ""
           - runs-on: windows-latest
-            CIBW_SKIP: ""
+            skip: ""
     runs-on: ${{matrix.runs-on}}
     steps:
       - uses: actions/checkout@v4
@@ -84,10 +84,10 @@ jobs:
         if: runner.os == 'Linux'
       - uses: pypa/cibuildwheel@v2.16
         env:
-          CIBW_SKIP: ${{matrix.CIBW_SKIP}}
+          CIBW_SKIP: "*-${{matrix.skip}}_*"
       - uses: actions/upload-artifact@v4
         with:
-          name: artifact-${{matrix.runs-on}}-${{matrix.CIBW_SKIP}}
+          name: artifact-${{matrix.runs-on}}-${{matrix.skip}}
           path: |
             wheelhouse/*.whl
 
