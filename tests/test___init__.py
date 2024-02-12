@@ -2,7 +2,7 @@ r"""Test __init__.py."""
 
 import os
 
-from tree_sitter_zathurarc import parser
+from tree_sitter_muttrc import parser
 
 
 class Test:
@@ -15,7 +15,7 @@ class Test:
         :rtype: None
         """
         with open(
-            os.path.join(os.path.dirname(__file__), "zathurarc"), "rb"
+            os.path.join(os.path.dirname(__file__), "muttrc"), "rb"
         ) as f:
             text = f.read()
         tree = parser.parse(text)

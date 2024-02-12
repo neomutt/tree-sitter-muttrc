@@ -1,7 +1,7 @@
 {
-  "name": "tree-sitter-zathurarc",
+  "name": "tree-sitter-muttrc",
   "version": "0.0.4",
-  "description": "zathurarc grammar for tree-sitter",
+  "description": "muttrc grammar for tree-sitter",
   "main": "bindings/node",
   "keywords": [
     "parsing",
@@ -15,13 +15,5 @@
   },
   "scripts": {
     "test": "tree-sitter test"
-  },
-  "tree-sitter": [
-    {
-      "scope": "source.zathurarc",
-      "file-types": [
-        "zathurarc"
-      ]
-    }
-  ]
+  }
 }
