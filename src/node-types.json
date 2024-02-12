@@ -1,0 +1,7353 @@
+[
+  {
+    "type": "account_hook_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "account_hook_directive",
+          "named": true
+        },
+        {
+          "type": "alias_directive",
+          "named": true
+        },
+        {
+          "type": "alternates_directive",
+          "named": true
+        },
+        {
+          "type": "alternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "append_hook_directive",
+          "named": true
+        },
+        {
+          "type": "attachments_directive",
+          "named": true
+        },
+        {
+          "type": "auto_view_directive",
+          "named": true
+        },
+        {
+          "type": "bind_directive",
+          "named": true
+        },
+        {
+          "type": "cd_directive",
+          "named": true
+        },
+        {
+          "type": "charset_hook_directive",
+          "named": true
+        },
+        {
+          "type": "close_hook_directive",
+          "named": true
+        },
+        {
+          "type": "color_directive",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "crypt_hook_directive",
+          "named": true
+        },
+        {
+          "type": "echo_directive",
+          "named": true
+        },
+        {
+          "type": "exec_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_hook_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "finish_directive",
+          "named": true
+        },
+        {
+          "type": "folder_hook_directive",
+          "named": true
+        },
+        {
+          "type": "group_directive",
+          "named": true
+        },
+        {
+          "type": "hdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "iconv_hook_directive",
+          "named": true
+        },
+        {
+          "type": "ifdef_directive",
+          "named": true
+        },
+        {
+          "type": "ifndef_directive",
+          "named": true
+        },
+        {
+          "type": "ignore_directive",
+          "named": true
+        },
+        {
+          "type": "index_format_hook_directive",
+          "named": true
+        },
+        {
+          "type": "lists_directive",
+          "named": true
+        },
+        {
+          "type": "macro_directive",
+          "named": true
+        },
+        {
+          "type": "mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "mailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "mbox_hook_directive",
+          "named": true
+        },
+        {
+          "type": "message_hook_directive",
+          "named": true
+        },
+        {
+          "type": "mime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "mono_directive",
+          "named": true
+        },
+        {
+          "type": "my_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "named_mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "nospam_directive",
+          "named": true
+        },
+        {
+          "type": "open_hook_directive",
+          "named": true
+        },
+        {
+          "type": "push_directive",
+          "named": true
+        },
+        {
+          "type": "reply_hook_directive",
+          "named": true
+        },
+        {
+          "type": "reset_directive",
+          "named": true
+        },
+        {
+          "type": "save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "score_directive",
+          "named": true
+        },
+        {
+          "type": "send2_hook_directive",
+          "named": true
+        },
+        {
+          "type": "send_hook_directive",
+          "named": true
+        },
+        {
+          "type": "set_directive",
+          "named": true
+        },
+        {
+          "type": "setenv_directive",
+          "named": true
+        },
+        {
+          "type": "shell",
+          "named": true
+        },
+        {
+          "type": "shutdown_hook_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_pin_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_unpin_directive",
+          "named": true
+        },
+        {
+          "type": "source_directive",
+          "named": true
+        },
+        {
+          "type": "spam_directive",
+          "named": true
+        },
+        {
+          "type": "startup_hook_directive",
+          "named": true
+        },
+        {
+          "type": "subjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_to_directive",
+          "named": true
+        },
+        {
+          "type": "timeout_hook_directive",
+          "named": true
+        },
+        {
+          "type": "toggle_directive",
+          "named": true
+        },
+        {
+          "type": "unalias_directive",
+          "named": true
+        },
+        {
+          "type": "unalternates_directive",
+          "named": true
+        },
+        {
+          "type": "unalternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "unattachments_directive",
+          "named": true
+        },
+        {
+          "type": "unauto_view_directive",
+          "named": true
+        },
+        {
+          "type": "unbind_directive",
+          "named": true
+        },
+        {
+          "type": "uncolor_directive",
+          "named": true
+        },
+        {
+          "type": "ungroup_directive",
+          "named": true
+        },
+        {
+          "type": "unhdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "unhook_directive",
+          "named": true
+        },
+        {
+          "type": "unignore_directive",
+          "named": true
+        },
+        {
+          "type": "unlists_directive",
+          "named": true
+        },
+        {
+          "type": "unmacro_directive",
+          "named": true
+        },
+        {
+          "type": "unmailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "unmailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "unmime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "unmono_directive",
+          "named": true
+        },
+        {
+          "type": "unmy_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "unscore_directive",
+          "named": true
+        },
+        {
+          "type": "unset_directive",
+          "named": true
+        },
+        {
+          "type": "unsetenv_directive",
+          "named": true
+        },
+        {
+          "type": "unsubjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_from_directive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "address",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "alias",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "alias_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "address",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "command_line_option",
+          "named": true
+        },
+        {
+          "type": "group_name",
+          "named": true
+        },
+        {
+          "type": "key",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "alternates_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "command_line_option",
+          "named": true
+        },
+        {
+          "type": "group_name",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "alternative_order_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mime",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "append_hook_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        },
+        {
+          "type": "shell_command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attachments_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "disposition",
+          "named": true
+        },
+        {
+          "type": "mime_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attribute",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "auto_view_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mime",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "background",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "color",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "bind_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "function",
+          "named": true
+        },
+        {
+          "type": "key",
+          "named": true
+        },
+        {
+          "type": "map",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cd_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "directory",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "charset",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "charset_hook_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "alias",
+          "named": true
+        },
+        {
+          "type": "charset",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "close_hook_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        },
+        {
+          "type": "shell_command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "color",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "color_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute",
+          "named": true
+        },
+        {
+          "type": "background",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "composeobject",
+          "named": true
+        },
+        {
+          "type": "foreground",
+          "named": true
+        },
+        {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "composeobject",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "crypt_hook_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "keyid",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "description",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "directory",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "disposition",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "echo_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "message",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "exec_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "function",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fcc_hook_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mailbox",
+          "named": true
+        },
+        {
+          "type": "pattern",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "fcc_save_hook_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mailbox",
+          "named": true
+        },
+        {
+          "type": "pattern",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "account_hook_directive",
+          "named": true
+        },
+        {
+          "type": "alias_directive",
+          "named": true
+        },
+        {
+          "type": "alternates_directive",
+          "named": true
+        },
+        {
+          "type": "alternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "append_hook_directive",
+          "named": true
+        },
+        {
+          "type": "attachments_directive",
+          "named": true
+        },
+        {
+          "type": "auto_view_directive",
+          "named": true
+        },
+        {
+          "type": "bind_directive",
+          "named": true
+        },
+        {
+          "type": "cd_directive",
+          "named": true
+        },
+        {
+          "type": "charset_hook_directive",
+          "named": true
+        },
+        {
+          "type": "close_hook_directive",
+          "named": true
+        },
+        {
+          "type": "color_directive",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "crypt_hook_directive",
+          "named": true
+        },
+        {
+          "type": "echo_directive",
+          "named": true
+        },
+        {
+          "type": "exec_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_hook_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "finish_directive",
+          "named": true
+        },
+        {
+          "type": "folder_hook_directive",
+          "named": true
+        },
+        {
+          "type": "group_directive",
+          "named": true
+        },
+        {
+          "type": "hdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "iconv_hook_directive",
+          "named": true
+        },
+        {
+          "type": "ifdef_directive",
+          "named": true
+        },
+        {
+          "type": "ifndef_directive",
+          "named": true
+        },
+        {
+          "type": "ignore_directive",
+          "named": true
+        },
+        {
+          "type": "index_format_hook_directive",
+          "named": true
+        },
+        {
+          "type": "lists_directive",
+          "named": true
+        },
+        {
+          "type": "macro_directive",
+          "named": true
+        },
+        {
+          "type": "mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "mailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "mbox_hook_directive",
+          "named": true
+        },
+        {
+          "type": "message_hook_directive",
+          "named": true
+        },
+        {
+          "type": "mime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "mono_directive",
+          "named": true
+        },
+        {
+          "type": "my_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "named_mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "nospam_directive",
+          "named": true
+        },
+        {
+          "type": "open_hook_directive",
+          "named": true
+        },
+        {
+          "type": "push_directive",
+          "named": true
+        },
+        {
+          "type": "reply_hook_directive",
+          "named": true
+        },
+        {
+          "type": "reset_directive",
+          "named": true
+        },
+        {
+          "type": "save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "score_directive",
+          "named": true
+        },
+        {
+          "type": "send2_hook_directive",
+          "named": true
+        },
+        {
+          "type": "send_hook_directive",
+          "named": true
+        },
+        {
+          "type": "set_directive",
+          "named": true
+        },
+        {
+          "type": "setenv_directive",
+          "named": true
+        },
+        {
+          "type": "shutdown_hook_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_pin_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_unpin_directive",
+          "named": true
+        },
+        {
+          "type": "source_directive",
+          "named": true
+        },
+        {
+          "type": "spam_directive",
+          "named": true
+        },
+        {
+          "type": "startup_hook_directive",
+          "named": true
+        },
+        {
+          "type": "subjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_to_directive",
+          "named": true
+        },
+        {
+          "type": "timeout_hook_directive",
+          "named": true
+        },
+        {
+          "type": "toggle_directive",
+          "named": true
+        },
+        {
+          "type": "unalias_directive",
+          "named": true
+        },
+        {
+          "type": "unalternates_directive",
+          "named": true
+        },
+        {
+          "type": "unalternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "unattachments_directive",
+          "named": true
+        },
+        {
+          "type": "unauto_view_directive",
+          "named": true
+        },
+        {
+          "type": "unbind_directive",
+          "named": true
+        },
+        {
+          "type": "uncolor_directive",
+          "named": true
+        },
+        {
+          "type": "ungroup_directive",
+          "named": true
+        },
+        {
+          "type": "unhdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "unhook_directive",
+          "named": true
+        },
+        {
+          "type": "unignore_directive",
+          "named": true
+        },
+        {
+          "type": "unlists_directive",
+          "named": true
+        },
+        {
+          "type": "unmacro_directive",
+          "named": true
+        },
+        {
+          "type": "unmailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "unmailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "unmime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "unmono_directive",
+          "named": true
+        },
+        {
+          "type": "unmy_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "unscore_directive",
+          "named": true
+        },
+        {
+          "type": "unset_directive",
+          "named": true
+        },
+        {
+          "type": "unsetenv_directive",
+          "named": true
+        },
+        {
+          "type": "unsubjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_from_directive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "finish_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "folder_hook_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "account_hook_directive",
+          "named": true
+        },
+        {
+          "type": "alias_directive",
+          "named": true
+        },
+        {
+          "type": "alternates_directive",
+          "named": true
+        },
+        {
+          "type": "alternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "append_hook_directive",
+          "named": true
+        },
+        {
+          "type": "attachments_directive",
+          "named": true
+        },
+        {
+          "type": "auto_view_directive",
+          "named": true
+        },
+        {
+          "type": "bind_directive",
+          "named": true
+        },
+        {
+          "type": "cd_directive",
+          "named": true
+        },
+        {
+          "type": "charset_hook_directive",
+          "named": true
+        },
+        {
+          "type": "close_hook_directive",
+          "named": true
+        },
+        {
+          "type": "color_directive",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "command_line_option",
+          "named": true
+        },
+        {
+          "type": "crypt_hook_directive",
+          "named": true
+        },
+        {
+          "type": "echo_directive",
+          "named": true
+        },
+        {
+          "type": "exec_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_hook_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "finish_directive",
+          "named": true
+        },
+        {
+          "type": "folder_hook_directive",
+          "named": true
+        },
+        {
+          "type": "group_directive",
+          "named": true
+        },
+        {
+          "type": "hdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "iconv_hook_directive",
+          "named": true
+        },
+        {
+          "type": "ifdef_directive",
+          "named": true
+        },
+        {
+          "type": "ifndef_directive",
+          "named": true
+        },
+        {
+          "type": "ignore_directive",
+          "named": true
+        },
+        {
+          "type": "index_format_hook_directive",
+          "named": true
+        },
+        {
+          "type": "lists_directive",
+          "named": true
+        },
+        {
+          "type": "macro_directive",
+          "named": true
+        },
+        {
+          "type": "mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "mailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "mbox_hook_directive",
+          "named": true
+        },
+        {
+          "type": "message_hook_directive",
+          "named": true
+        },
+        {
+          "type": "mime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "mono_directive",
+          "named": true
+        },
+        {
+          "type": "my_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "named_mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "nospam_directive",
+          "named": true
+        },
+        {
+          "type": "open_hook_directive",
+          "named": true
+        },
+        {
+          "type": "push_directive",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        },
+        {
+          "type": "reply_hook_directive",
+          "named": true
+        },
+        {
+          "type": "reset_directive",
+          "named": true
+        },
+        {
+          "type": "save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "score_directive",
+          "named": true
+        },
+        {
+          "type": "send2_hook_directive",
+          "named": true
+        },
+        {
+          "type": "send_hook_directive",
+          "named": true
+        },
+        {
+          "type": "set_directive",
+          "named": true
+        },
+        {
+          "type": "setenv_directive",
+          "named": true
+        },
+        {
+          "type": "shutdown_hook_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_pin_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_unpin_directive",
+          "named": true
+        },
+        {
+          "type": "source_directive",
+          "named": true
+        },
+        {
+          "type": "spam_directive",
+          "named": true
+        },
+        {
+          "type": "startup_hook_directive",
+          "named": true
+        },
+        {
+          "type": "subjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_to_directive",
+          "named": true
+        },
+        {
+          "type": "timeout_hook_directive",
+          "named": true
+        },
+        {
+          "type": "toggle_directive",
+          "named": true
+        },
+        {
+          "type": "unalias_directive",
+          "named": true
+        },
+        {
+          "type": "unalternates_directive",
+          "named": true
+        },
+        {
+          "type": "unalternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "unattachments_directive",
+          "named": true
+        },
+        {
+          "type": "unauto_view_directive",
+          "named": true
+        },
+        {
+          "type": "unbind_directive",
+          "named": true
+        },
+        {
+          "type": "uncolor_directive",
+          "named": true
+        },
+        {
+          "type": "ungroup_directive",
+          "named": true
+        },
+        {
+          "type": "unhdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "unhook_directive",
+          "named": true
+        },
+        {
+          "type": "unignore_directive",
+          "named": true
+        },
+        {
+          "type": "unlists_directive",
+          "named": true
+        },
+        {
+          "type": "unmacro_directive",
+          "named": true
+        },
+        {
+          "type": "unmailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "unmailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "unmime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "unmono_directive",
+          "named": true
+        },
+        {
+          "type": "unmy_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "unscore_directive",
+          "named": true
+        },
+        {
+          "type": "unset_directive",
+          "named": true
+        },
+        {
+          "type": "unsetenv_directive",
+          "named": true
+        },
+        {
+          "type": "unsubjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_from_directive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "foreground",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "color",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "format",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "group_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "address",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "command_line_option",
+          "named": true
+        },
+        {
+          "type": "group_name",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "group_name",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "hdr_order_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "header",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "header",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "header_field",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "hook_type",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "iconv_hook_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "charset",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ifdef_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "account_hook_directive",
+          "named": true
+        },
+        {
+          "type": "alias_directive",
+          "named": true
+        },
+        {
+          "type": "alternates_directive",
+          "named": true
+        },
+        {
+          "type": "alternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "append_hook_directive",
+          "named": true
+        },
+        {
+          "type": "attachments_directive",
+          "named": true
+        },
+        {
+          "type": "auto_view_directive",
+          "named": true
+        },
+        {
+          "type": "bind_directive",
+          "named": true
+        },
+        {
+          "type": "cd_directive",
+          "named": true
+        },
+        {
+          "type": "charset_hook_directive",
+          "named": true
+        },
+        {
+          "type": "close_hook_directive",
+          "named": true
+        },
+        {
+          "type": "color_directive",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "crypt_hook_directive",
+          "named": true
+        },
+        {
+          "type": "echo_directive",
+          "named": true
+        },
+        {
+          "type": "exec_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_hook_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "finish_directive",
+          "named": true
+        },
+        {
+          "type": "folder_hook_directive",
+          "named": true
+        },
+        {
+          "type": "group_directive",
+          "named": true
+        },
+        {
+          "type": "hdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "iconv_hook_directive",
+          "named": true
+        },
+        {
+          "type": "ifdef_directive",
+          "named": true
+        },
+        {
+          "type": "ifndef_directive",
+          "named": true
+        },
+        {
+          "type": "ignore_directive",
+          "named": true
+        },
+        {
+          "type": "index_format_hook_directive",
+          "named": true
+        },
+        {
+          "type": "lists_directive",
+          "named": true
+        },
+        {
+          "type": "macro_directive",
+          "named": true
+        },
+        {
+          "type": "mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "mailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "mbox_hook_directive",
+          "named": true
+        },
+        {
+          "type": "message_hook_directive",
+          "named": true
+        },
+        {
+          "type": "mime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "mono_directive",
+          "named": true
+        },
+        {
+          "type": "my_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "named_mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "nospam_directive",
+          "named": true
+        },
+        {
+          "type": "open_hook_directive",
+          "named": true
+        },
+        {
+          "type": "push_directive",
+          "named": true
+        },
+        {
+          "type": "reply_hook_directive",
+          "named": true
+        },
+        {
+          "type": "reset_directive",
+          "named": true
+        },
+        {
+          "type": "save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "score_directive",
+          "named": true
+        },
+        {
+          "type": "send2_hook_directive",
+          "named": true
+        },
+        {
+          "type": "send_hook_directive",
+          "named": true
+        },
+        {
+          "type": "set_directive",
+          "named": true
+        },
+        {
+          "type": "setenv_directive",
+          "named": true
+        },
+        {
+          "type": "shutdown_hook_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_pin_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_unpin_directive",
+          "named": true
+        },
+        {
+          "type": "source_directive",
+          "named": true
+        },
+        {
+          "type": "spam_directive",
+          "named": true
+        },
+        {
+          "type": "startup_hook_directive",
+          "named": true
+        },
+        {
+          "type": "subjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_to_directive",
+          "named": true
+        },
+        {
+          "type": "symbol",
+          "named": true
+        },
+        {
+          "type": "timeout_hook_directive",
+          "named": true
+        },
+        {
+          "type": "toggle_directive",
+          "named": true
+        },
+        {
+          "type": "unalias_directive",
+          "named": true
+        },
+        {
+          "type": "unalternates_directive",
+          "named": true
+        },
+        {
+          "type": "unalternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "unattachments_directive",
+          "named": true
+        },
+        {
+          "type": "unauto_view_directive",
+          "named": true
+        },
+        {
+          "type": "unbind_directive",
+          "named": true
+        },
+        {
+          "type": "uncolor_directive",
+          "named": true
+        },
+        {
+          "type": "ungroup_directive",
+          "named": true
+        },
+        {
+          "type": "unhdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "unhook_directive",
+          "named": true
+        },
+        {
+          "type": "unignore_directive",
+          "named": true
+        },
+        {
+          "type": "unlists_directive",
+          "named": true
+        },
+        {
+          "type": "unmacro_directive",
+          "named": true
+        },
+        {
+          "type": "unmailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "unmailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "unmime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "unmono_directive",
+          "named": true
+        },
+        {
+          "type": "unmy_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "unscore_directive",
+          "named": true
+        },
+        {
+          "type": "unset_directive",
+          "named": true
+        },
+        {
+          "type": "unsetenv_directive",
+          "named": true
+        },
+        {
+          "type": "unsubjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_from_directive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ifndef_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "account_hook_directive",
+          "named": true
+        },
+        {
+          "type": "alias_directive",
+          "named": true
+        },
+        {
+          "type": "alternates_directive",
+          "named": true
+        },
+        {
+          "type": "alternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "append_hook_directive",
+          "named": true
+        },
+        {
+          "type": "attachments_directive",
+          "named": true
+        },
+        {
+          "type": "auto_view_directive",
+          "named": true
+        },
+        {
+          "type": "bind_directive",
+          "named": true
+        },
+        {
+          "type": "cd_directive",
+          "named": true
+        },
+        {
+          "type": "charset_hook_directive",
+          "named": true
+        },
+        {
+          "type": "close_hook_directive",
+          "named": true
+        },
+        {
+          "type": "color_directive",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "crypt_hook_directive",
+          "named": true
+        },
+        {
+          "type": "echo_directive",
+          "named": true
+        },
+        {
+          "type": "exec_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_hook_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "finish_directive",
+          "named": true
+        },
+        {
+          "type": "folder_hook_directive",
+          "named": true
+        },
+        {
+          "type": "group_directive",
+          "named": true
+        },
+        {
+          "type": "hdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "iconv_hook_directive",
+          "named": true
+        },
+        {
+          "type": "ifdef_directive",
+          "named": true
+        },
+        {
+          "type": "ifndef_directive",
+          "named": true
+        },
+        {
+          "type": "ignore_directive",
+          "named": true
+        },
+        {
+          "type": "index_format_hook_directive",
+          "named": true
+        },
+        {
+          "type": "lists_directive",
+          "named": true
+        },
+        {
+          "type": "macro_directive",
+          "named": true
+        },
+        {
+          "type": "mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "mailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "mbox_hook_directive",
+          "named": true
+        },
+        {
+          "type": "message_hook_directive",
+          "named": true
+        },
+        {
+          "type": "mime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "mono_directive",
+          "named": true
+        },
+        {
+          "type": "my_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "named_mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "nospam_directive",
+          "named": true
+        },
+        {
+          "type": "open_hook_directive",
+          "named": true
+        },
+        {
+          "type": "push_directive",
+          "named": true
+        },
+        {
+          "type": "reply_hook_directive",
+          "named": true
+        },
+        {
+          "type": "reset_directive",
+          "named": true
+        },
+        {
+          "type": "save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "score_directive",
+          "named": true
+        },
+        {
+          "type": "send2_hook_directive",
+          "named": true
+        },
+        {
+          "type": "send_hook_directive",
+          "named": true
+        },
+        {
+          "type": "set_directive",
+          "named": true
+        },
+        {
+          "type": "setenv_directive",
+          "named": true
+        },
+        {
+          "type": "shutdown_hook_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_pin_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_unpin_directive",
+          "named": true
+        },
+        {
+          "type": "source_directive",
+          "named": true
+        },
+        {
+          "type": "spam_directive",
+          "named": true
+        },
+        {
+          "type": "startup_hook_directive",
+          "named": true
+        },
+        {
+          "type": "subjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_to_directive",
+          "named": true
+        },
+        {
+          "type": "symbol",
+          "named": true
+        },
+        {
+          "type": "timeout_hook_directive",
+          "named": true
+        },
+        {
+          "type": "toggle_directive",
+          "named": true
+        },
+        {
+          "type": "unalias_directive",
+          "named": true
+        },
+        {
+          "type": "unalternates_directive",
+          "named": true
+        },
+        {
+          "type": "unalternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "unattachments_directive",
+          "named": true
+        },
+        {
+          "type": "unauto_view_directive",
+          "named": true
+        },
+        {
+          "type": "unbind_directive",
+          "named": true
+        },
+        {
+          "type": "uncolor_directive",
+          "named": true
+        },
+        {
+          "type": "ungroup_directive",
+          "named": true
+        },
+        {
+          "type": "unhdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "unhook_directive",
+          "named": true
+        },
+        {
+          "type": "unignore_directive",
+          "named": true
+        },
+        {
+          "type": "unlists_directive",
+          "named": true
+        },
+        {
+          "type": "unmacro_directive",
+          "named": true
+        },
+        {
+          "type": "unmailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "unmailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "unmime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "unmono_directive",
+          "named": true
+        },
+        {
+          "type": "unmy_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "unscore_directive",
+          "named": true
+        },
+        {
+          "type": "unset_directive",
+          "named": true
+        },
+        {
+          "type": "unsetenv_directive",
+          "named": true
+        },
+        {
+          "type": "unsubjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_from_directive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ignore_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "index_format_hook_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "name",
+          "named": true
+        },
+        {
+          "type": "pattern",
+          "named": true
+        },
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "key",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "escape",
+          "named": true
+        },
+        {
+          "type": "key_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "keyid",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "lists_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "command_line_option",
+          "named": true
+        },
+        {
+          "type": "group_name",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "macro_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "key",
+          "named": true
+        },
+        {
+          "type": "map",
+          "named": true
+        },
+        {
+          "type": "sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mailbox",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mailboxes_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mailbox",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mailto_allow_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "header_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "map",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "mbox_hook_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mailbox",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "message",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "message_hook_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "account_hook_directive",
+          "named": true
+        },
+        {
+          "type": "alias_directive",
+          "named": true
+        },
+        {
+          "type": "alternates_directive",
+          "named": true
+        },
+        {
+          "type": "alternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "append_hook_directive",
+          "named": true
+        },
+        {
+          "type": "attachments_directive",
+          "named": true
+        },
+        {
+          "type": "auto_view_directive",
+          "named": true
+        },
+        {
+          "type": "bind_directive",
+          "named": true
+        },
+        {
+          "type": "cd_directive",
+          "named": true
+        },
+        {
+          "type": "charset_hook_directive",
+          "named": true
+        },
+        {
+          "type": "close_hook_directive",
+          "named": true
+        },
+        {
+          "type": "color_directive",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "crypt_hook_directive",
+          "named": true
+        },
+        {
+          "type": "echo_directive",
+          "named": true
+        },
+        {
+          "type": "exec_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_hook_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "finish_directive",
+          "named": true
+        },
+        {
+          "type": "folder_hook_directive",
+          "named": true
+        },
+        {
+          "type": "group_directive",
+          "named": true
+        },
+        {
+          "type": "hdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "iconv_hook_directive",
+          "named": true
+        },
+        {
+          "type": "ifdef_directive",
+          "named": true
+        },
+        {
+          "type": "ifndef_directive",
+          "named": true
+        },
+        {
+          "type": "ignore_directive",
+          "named": true
+        },
+        {
+          "type": "index_format_hook_directive",
+          "named": true
+        },
+        {
+          "type": "lists_directive",
+          "named": true
+        },
+        {
+          "type": "macro_directive",
+          "named": true
+        },
+        {
+          "type": "mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "mailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "mbox_hook_directive",
+          "named": true
+        },
+        {
+          "type": "message_hook_directive",
+          "named": true
+        },
+        {
+          "type": "mime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "mono_directive",
+          "named": true
+        },
+        {
+          "type": "my_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "named_mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "nospam_directive",
+          "named": true
+        },
+        {
+          "type": "open_hook_directive",
+          "named": true
+        },
+        {
+          "type": "pattern",
+          "named": true
+        },
+        {
+          "type": "push_directive",
+          "named": true
+        },
+        {
+          "type": "reply_hook_directive",
+          "named": true
+        },
+        {
+          "type": "reset_directive",
+          "named": true
+        },
+        {
+          "type": "save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "score_directive",
+          "named": true
+        },
+        {
+          "type": "send2_hook_directive",
+          "named": true
+        },
+        {
+          "type": "send_hook_directive",
+          "named": true
+        },
+        {
+          "type": "set_directive",
+          "named": true
+        },
+        {
+          "type": "setenv_directive",
+          "named": true
+        },
+        {
+          "type": "shutdown_hook_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_pin_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_unpin_directive",
+          "named": true
+        },
+        {
+          "type": "source_directive",
+          "named": true
+        },
+        {
+          "type": "spam_directive",
+          "named": true
+        },
+        {
+          "type": "startup_hook_directive",
+          "named": true
+        },
+        {
+          "type": "subjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_to_directive",
+          "named": true
+        },
+        {
+          "type": "timeout_hook_directive",
+          "named": true
+        },
+        {
+          "type": "toggle_directive",
+          "named": true
+        },
+        {
+          "type": "unalias_directive",
+          "named": true
+        },
+        {
+          "type": "unalternates_directive",
+          "named": true
+        },
+        {
+          "type": "unalternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "unattachments_directive",
+          "named": true
+        },
+        {
+          "type": "unauto_view_directive",
+          "named": true
+        },
+        {
+          "type": "unbind_directive",
+          "named": true
+        },
+        {
+          "type": "uncolor_directive",
+          "named": true
+        },
+        {
+          "type": "ungroup_directive",
+          "named": true
+        },
+        {
+          "type": "unhdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "unhook_directive",
+          "named": true
+        },
+        {
+          "type": "unignore_directive",
+          "named": true
+        },
+        {
+          "type": "unlists_directive",
+          "named": true
+        },
+        {
+          "type": "unmacro_directive",
+          "named": true
+        },
+        {
+          "type": "unmailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "unmailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "unmime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "unmono_directive",
+          "named": true
+        },
+        {
+          "type": "unmy_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "unscore_directive",
+          "named": true
+        },
+        {
+          "type": "unset_directive",
+          "named": true
+        },
+        {
+          "type": "unsetenv_directive",
+          "named": true
+        },
+        {
+          "type": "unsubjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_from_directive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mime",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "mime_type",
+          "named": true
+        },
+        {
+          "type": "sub_mime_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mime_lookup_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mime",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mono_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attribute",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "object",
+          "named": true
+        },
+        {
+          "type": "pattern",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "my_hdr_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "name",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "named_mailboxes_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "description",
+          "named": true
+        },
+        {
+          "type": "mailbox",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "nospam_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "object",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "open_hook_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        },
+        {
+          "type": "shell_command",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "path",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pattern",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "push_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "quadoption",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "replacement",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reply_hook_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "account_hook_directive",
+          "named": true
+        },
+        {
+          "type": "alias_directive",
+          "named": true
+        },
+        {
+          "type": "alternates_directive",
+          "named": true
+        },
+        {
+          "type": "alternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "append_hook_directive",
+          "named": true
+        },
+        {
+          "type": "attachments_directive",
+          "named": true
+        },
+        {
+          "type": "auto_view_directive",
+          "named": true
+        },
+        {
+          "type": "bind_directive",
+          "named": true
+        },
+        {
+          "type": "cd_directive",
+          "named": true
+        },
+        {
+          "type": "charset_hook_directive",
+          "named": true
+        },
+        {
+          "type": "close_hook_directive",
+          "named": true
+        },
+        {
+          "type": "color_directive",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "crypt_hook_directive",
+          "named": true
+        },
+        {
+          "type": "echo_directive",
+          "named": true
+        },
+        {
+          "type": "exec_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_hook_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "finish_directive",
+          "named": true
+        },
+        {
+          "type": "folder_hook_directive",
+          "named": true
+        },
+        {
+          "type": "group_directive",
+          "named": true
+        },
+        {
+          "type": "hdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "iconv_hook_directive",
+          "named": true
+        },
+        {
+          "type": "ifdef_directive",
+          "named": true
+        },
+        {
+          "type": "ifndef_directive",
+          "named": true
+        },
+        {
+          "type": "ignore_directive",
+          "named": true
+        },
+        {
+          "type": "index_format_hook_directive",
+          "named": true
+        },
+        {
+          "type": "lists_directive",
+          "named": true
+        },
+        {
+          "type": "macro_directive",
+          "named": true
+        },
+        {
+          "type": "mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "mailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "mbox_hook_directive",
+          "named": true
+        },
+        {
+          "type": "message_hook_directive",
+          "named": true
+        },
+        {
+          "type": "mime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "mono_directive",
+          "named": true
+        },
+        {
+          "type": "my_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "named_mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "nospam_directive",
+          "named": true
+        },
+        {
+          "type": "open_hook_directive",
+          "named": true
+        },
+        {
+          "type": "pattern",
+          "named": true
+        },
+        {
+          "type": "push_directive",
+          "named": true
+        },
+        {
+          "type": "reply_hook_directive",
+          "named": true
+        },
+        {
+          "type": "reset_directive",
+          "named": true
+        },
+        {
+          "type": "save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "score_directive",
+          "named": true
+        },
+        {
+          "type": "send2_hook_directive",
+          "named": true
+        },
+        {
+          "type": "send_hook_directive",
+          "named": true
+        },
+        {
+          "type": "set_directive",
+          "named": true
+        },
+        {
+          "type": "setenv_directive",
+          "named": true
+        },
+        {
+          "type": "shutdown_hook_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_pin_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_unpin_directive",
+          "named": true
+        },
+        {
+          "type": "source_directive",
+          "named": true
+        },
+        {
+          "type": "spam_directive",
+          "named": true
+        },
+        {
+          "type": "startup_hook_directive",
+          "named": true
+        },
+        {
+          "type": "subjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_to_directive",
+          "named": true
+        },
+        {
+          "type": "timeout_hook_directive",
+          "named": true
+        },
+        {
+          "type": "toggle_directive",
+          "named": true
+        },
+        {
+          "type": "unalias_directive",
+          "named": true
+        },
+        {
+          "type": "unalternates_directive",
+          "named": true
+        },
+        {
+          "type": "unalternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "unattachments_directive",
+          "named": true
+        },
+        {
+          "type": "unauto_view_directive",
+          "named": true
+        },
+        {
+          "type": "unbind_directive",
+          "named": true
+        },
+        {
+          "type": "uncolor_directive",
+          "named": true
+        },
+        {
+          "type": "ungroup_directive",
+          "named": true
+        },
+        {
+          "type": "unhdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "unhook_directive",
+          "named": true
+        },
+        {
+          "type": "unignore_directive",
+          "named": true
+        },
+        {
+          "type": "unlists_directive",
+          "named": true
+        },
+        {
+          "type": "unmacro_directive",
+          "named": true
+        },
+        {
+          "type": "unmailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "unmailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "unmime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "unmono_directive",
+          "named": true
+        },
+        {
+          "type": "unmy_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "unscore_directive",
+          "named": true
+        },
+        {
+          "type": "unset_directive",
+          "named": true
+        },
+        {
+          "type": "unsetenv_directive",
+          "named": true
+        },
+        {
+          "type": "unsubjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_from_directive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reset_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "save_hook_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mailbox",
+          "named": true
+        },
+        {
+          "type": "pattern",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "score_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "pattern",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "send2_hook_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "account_hook_directive",
+          "named": true
+        },
+        {
+          "type": "alias_directive",
+          "named": true
+        },
+        {
+          "type": "alternates_directive",
+          "named": true
+        },
+        {
+          "type": "alternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "append_hook_directive",
+          "named": true
+        },
+        {
+          "type": "attachments_directive",
+          "named": true
+        },
+        {
+          "type": "auto_view_directive",
+          "named": true
+        },
+        {
+          "type": "bind_directive",
+          "named": true
+        },
+        {
+          "type": "cd_directive",
+          "named": true
+        },
+        {
+          "type": "charset_hook_directive",
+          "named": true
+        },
+        {
+          "type": "close_hook_directive",
+          "named": true
+        },
+        {
+          "type": "color_directive",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "crypt_hook_directive",
+          "named": true
+        },
+        {
+          "type": "echo_directive",
+          "named": true
+        },
+        {
+          "type": "exec_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_hook_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "finish_directive",
+          "named": true
+        },
+        {
+          "type": "folder_hook_directive",
+          "named": true
+        },
+        {
+          "type": "group_directive",
+          "named": true
+        },
+        {
+          "type": "hdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "iconv_hook_directive",
+          "named": true
+        },
+        {
+          "type": "ifdef_directive",
+          "named": true
+        },
+        {
+          "type": "ifndef_directive",
+          "named": true
+        },
+        {
+          "type": "ignore_directive",
+          "named": true
+        },
+        {
+          "type": "index_format_hook_directive",
+          "named": true
+        },
+        {
+          "type": "lists_directive",
+          "named": true
+        },
+        {
+          "type": "macro_directive",
+          "named": true
+        },
+        {
+          "type": "mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "mailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "mbox_hook_directive",
+          "named": true
+        },
+        {
+          "type": "message_hook_directive",
+          "named": true
+        },
+        {
+          "type": "mime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "mono_directive",
+          "named": true
+        },
+        {
+          "type": "my_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "named_mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "nospam_directive",
+          "named": true
+        },
+        {
+          "type": "open_hook_directive",
+          "named": true
+        },
+        {
+          "type": "pattern",
+          "named": true
+        },
+        {
+          "type": "push_directive",
+          "named": true
+        },
+        {
+          "type": "reply_hook_directive",
+          "named": true
+        },
+        {
+          "type": "reset_directive",
+          "named": true
+        },
+        {
+          "type": "save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "score_directive",
+          "named": true
+        },
+        {
+          "type": "send2_hook_directive",
+          "named": true
+        },
+        {
+          "type": "send_hook_directive",
+          "named": true
+        },
+        {
+          "type": "set_directive",
+          "named": true
+        },
+        {
+          "type": "setenv_directive",
+          "named": true
+        },
+        {
+          "type": "shutdown_hook_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_pin_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_unpin_directive",
+          "named": true
+        },
+        {
+          "type": "source_directive",
+          "named": true
+        },
+        {
+          "type": "spam_directive",
+          "named": true
+        },
+        {
+          "type": "startup_hook_directive",
+          "named": true
+        },
+        {
+          "type": "subjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_to_directive",
+          "named": true
+        },
+        {
+          "type": "timeout_hook_directive",
+          "named": true
+        },
+        {
+          "type": "toggle_directive",
+          "named": true
+        },
+        {
+          "type": "unalias_directive",
+          "named": true
+        },
+        {
+          "type": "unalternates_directive",
+          "named": true
+        },
+        {
+          "type": "unalternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "unattachments_directive",
+          "named": true
+        },
+        {
+          "type": "unauto_view_directive",
+          "named": true
+        },
+        {
+          "type": "unbind_directive",
+          "named": true
+        },
+        {
+          "type": "uncolor_directive",
+          "named": true
+        },
+        {
+          "type": "ungroup_directive",
+          "named": true
+        },
+        {
+          "type": "unhdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "unhook_directive",
+          "named": true
+        },
+        {
+          "type": "unignore_directive",
+          "named": true
+        },
+        {
+          "type": "unlists_directive",
+          "named": true
+        },
+        {
+          "type": "unmacro_directive",
+          "named": true
+        },
+        {
+          "type": "unmailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "unmailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "unmime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "unmono_directive",
+          "named": true
+        },
+        {
+          "type": "unmy_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "unscore_directive",
+          "named": true
+        },
+        {
+          "type": "unset_directive",
+          "named": true
+        },
+        {
+          "type": "unsetenv_directive",
+          "named": true
+        },
+        {
+          "type": "unsubjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_from_directive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "send_hook_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "account_hook_directive",
+          "named": true
+        },
+        {
+          "type": "alias_directive",
+          "named": true
+        },
+        {
+          "type": "alternates_directive",
+          "named": true
+        },
+        {
+          "type": "alternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "append_hook_directive",
+          "named": true
+        },
+        {
+          "type": "attachments_directive",
+          "named": true
+        },
+        {
+          "type": "auto_view_directive",
+          "named": true
+        },
+        {
+          "type": "bind_directive",
+          "named": true
+        },
+        {
+          "type": "cd_directive",
+          "named": true
+        },
+        {
+          "type": "charset_hook_directive",
+          "named": true
+        },
+        {
+          "type": "close_hook_directive",
+          "named": true
+        },
+        {
+          "type": "color_directive",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "crypt_hook_directive",
+          "named": true
+        },
+        {
+          "type": "echo_directive",
+          "named": true
+        },
+        {
+          "type": "exec_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_hook_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "finish_directive",
+          "named": true
+        },
+        {
+          "type": "folder_hook_directive",
+          "named": true
+        },
+        {
+          "type": "group_directive",
+          "named": true
+        },
+        {
+          "type": "hdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "iconv_hook_directive",
+          "named": true
+        },
+        {
+          "type": "ifdef_directive",
+          "named": true
+        },
+        {
+          "type": "ifndef_directive",
+          "named": true
+        },
+        {
+          "type": "ignore_directive",
+          "named": true
+        },
+        {
+          "type": "index_format_hook_directive",
+          "named": true
+        },
+        {
+          "type": "lists_directive",
+          "named": true
+        },
+        {
+          "type": "macro_directive",
+          "named": true
+        },
+        {
+          "type": "mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "mailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "mbox_hook_directive",
+          "named": true
+        },
+        {
+          "type": "message_hook_directive",
+          "named": true
+        },
+        {
+          "type": "mime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "mono_directive",
+          "named": true
+        },
+        {
+          "type": "my_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "named_mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "nospam_directive",
+          "named": true
+        },
+        {
+          "type": "open_hook_directive",
+          "named": true
+        },
+        {
+          "type": "pattern",
+          "named": true
+        },
+        {
+          "type": "push_directive",
+          "named": true
+        },
+        {
+          "type": "reply_hook_directive",
+          "named": true
+        },
+        {
+          "type": "reset_directive",
+          "named": true
+        },
+        {
+          "type": "save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "score_directive",
+          "named": true
+        },
+        {
+          "type": "send2_hook_directive",
+          "named": true
+        },
+        {
+          "type": "send_hook_directive",
+          "named": true
+        },
+        {
+          "type": "set_directive",
+          "named": true
+        },
+        {
+          "type": "setenv_directive",
+          "named": true
+        },
+        {
+          "type": "shutdown_hook_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_pin_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_unpin_directive",
+          "named": true
+        },
+        {
+          "type": "source_directive",
+          "named": true
+        },
+        {
+          "type": "spam_directive",
+          "named": true
+        },
+        {
+          "type": "startup_hook_directive",
+          "named": true
+        },
+        {
+          "type": "subjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_to_directive",
+          "named": true
+        },
+        {
+          "type": "timeout_hook_directive",
+          "named": true
+        },
+        {
+          "type": "toggle_directive",
+          "named": true
+        },
+        {
+          "type": "unalias_directive",
+          "named": true
+        },
+        {
+          "type": "unalternates_directive",
+          "named": true
+        },
+        {
+          "type": "unalternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "unattachments_directive",
+          "named": true
+        },
+        {
+          "type": "unauto_view_directive",
+          "named": true
+        },
+        {
+          "type": "unbind_directive",
+          "named": true
+        },
+        {
+          "type": "uncolor_directive",
+          "named": true
+        },
+        {
+          "type": "ungroup_directive",
+          "named": true
+        },
+        {
+          "type": "unhdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "unhook_directive",
+          "named": true
+        },
+        {
+          "type": "unignore_directive",
+          "named": true
+        },
+        {
+          "type": "unlists_directive",
+          "named": true
+        },
+        {
+          "type": "unmacro_directive",
+          "named": true
+        },
+        {
+          "type": "unmailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "unmailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "unmime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "unmono_directive",
+          "named": true
+        },
+        {
+          "type": "unmy_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "unscore_directive",
+          "named": true
+        },
+        {
+          "type": "unset_directive",
+          "named": true
+        },
+        {
+          "type": "unsetenv_directive",
+          "named": true
+        },
+        {
+          "type": "unsubjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_from_directive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sequence",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "set_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "int",
+          "named": true
+        },
+        {
+          "type": "option",
+          "named": true
+        },
+        {
+          "type": "quadoption",
+          "named": true
+        },
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "setenv_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "option",
+          "named": true
+        },
+        {
+          "type": "value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "shell_command",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "shutdown_hook_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "account_hook_directive",
+          "named": true
+        },
+        {
+          "type": "alias_directive",
+          "named": true
+        },
+        {
+          "type": "alternates_directive",
+          "named": true
+        },
+        {
+          "type": "alternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "append_hook_directive",
+          "named": true
+        },
+        {
+          "type": "attachments_directive",
+          "named": true
+        },
+        {
+          "type": "auto_view_directive",
+          "named": true
+        },
+        {
+          "type": "bind_directive",
+          "named": true
+        },
+        {
+          "type": "cd_directive",
+          "named": true
+        },
+        {
+          "type": "charset_hook_directive",
+          "named": true
+        },
+        {
+          "type": "close_hook_directive",
+          "named": true
+        },
+        {
+          "type": "color_directive",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "crypt_hook_directive",
+          "named": true
+        },
+        {
+          "type": "echo_directive",
+          "named": true
+        },
+        {
+          "type": "exec_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_hook_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "finish_directive",
+          "named": true
+        },
+        {
+          "type": "folder_hook_directive",
+          "named": true
+        },
+        {
+          "type": "group_directive",
+          "named": true
+        },
+        {
+          "type": "hdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "iconv_hook_directive",
+          "named": true
+        },
+        {
+          "type": "ifdef_directive",
+          "named": true
+        },
+        {
+          "type": "ifndef_directive",
+          "named": true
+        },
+        {
+          "type": "ignore_directive",
+          "named": true
+        },
+        {
+          "type": "index_format_hook_directive",
+          "named": true
+        },
+        {
+          "type": "lists_directive",
+          "named": true
+        },
+        {
+          "type": "macro_directive",
+          "named": true
+        },
+        {
+          "type": "mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "mailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "mbox_hook_directive",
+          "named": true
+        },
+        {
+          "type": "message_hook_directive",
+          "named": true
+        },
+        {
+          "type": "mime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "mono_directive",
+          "named": true
+        },
+        {
+          "type": "my_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "named_mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "nospam_directive",
+          "named": true
+        },
+        {
+          "type": "open_hook_directive",
+          "named": true
+        },
+        {
+          "type": "push_directive",
+          "named": true
+        },
+        {
+          "type": "reply_hook_directive",
+          "named": true
+        },
+        {
+          "type": "reset_directive",
+          "named": true
+        },
+        {
+          "type": "save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "score_directive",
+          "named": true
+        },
+        {
+          "type": "send2_hook_directive",
+          "named": true
+        },
+        {
+          "type": "send_hook_directive",
+          "named": true
+        },
+        {
+          "type": "set_directive",
+          "named": true
+        },
+        {
+          "type": "setenv_directive",
+          "named": true
+        },
+        {
+          "type": "shutdown_hook_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_pin_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_unpin_directive",
+          "named": true
+        },
+        {
+          "type": "source_directive",
+          "named": true
+        },
+        {
+          "type": "spam_directive",
+          "named": true
+        },
+        {
+          "type": "startup_hook_directive",
+          "named": true
+        },
+        {
+          "type": "subjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_to_directive",
+          "named": true
+        },
+        {
+          "type": "timeout_hook_directive",
+          "named": true
+        },
+        {
+          "type": "toggle_directive",
+          "named": true
+        },
+        {
+          "type": "unalias_directive",
+          "named": true
+        },
+        {
+          "type": "unalternates_directive",
+          "named": true
+        },
+        {
+          "type": "unalternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "unattachments_directive",
+          "named": true
+        },
+        {
+          "type": "unauto_view_directive",
+          "named": true
+        },
+        {
+          "type": "unbind_directive",
+          "named": true
+        },
+        {
+          "type": "uncolor_directive",
+          "named": true
+        },
+        {
+          "type": "ungroup_directive",
+          "named": true
+        },
+        {
+          "type": "unhdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "unhook_directive",
+          "named": true
+        },
+        {
+          "type": "unignore_directive",
+          "named": true
+        },
+        {
+          "type": "unlists_directive",
+          "named": true
+        },
+        {
+          "type": "unmacro_directive",
+          "named": true
+        },
+        {
+          "type": "unmailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "unmailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "unmime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "unmono_directive",
+          "named": true
+        },
+        {
+          "type": "unmy_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "unscore_directive",
+          "named": true
+        },
+        {
+          "type": "unset_directive",
+          "named": true
+        },
+        {
+          "type": "unsetenv_directive",
+          "named": true
+        },
+        {
+          "type": "unsubjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_from_directive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sidebar_pin_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mailbox",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sidebar_unpin_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mailbox",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "path",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "spam_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "format",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "startup_hook_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "account_hook_directive",
+          "named": true
+        },
+        {
+          "type": "alias_directive",
+          "named": true
+        },
+        {
+          "type": "alternates_directive",
+          "named": true
+        },
+        {
+          "type": "alternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "append_hook_directive",
+          "named": true
+        },
+        {
+          "type": "attachments_directive",
+          "named": true
+        },
+        {
+          "type": "auto_view_directive",
+          "named": true
+        },
+        {
+          "type": "bind_directive",
+          "named": true
+        },
+        {
+          "type": "cd_directive",
+          "named": true
+        },
+        {
+          "type": "charset_hook_directive",
+          "named": true
+        },
+        {
+          "type": "close_hook_directive",
+          "named": true
+        },
+        {
+          "type": "color_directive",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "crypt_hook_directive",
+          "named": true
+        },
+        {
+          "type": "echo_directive",
+          "named": true
+        },
+        {
+          "type": "exec_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_hook_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "finish_directive",
+          "named": true
+        },
+        {
+          "type": "folder_hook_directive",
+          "named": true
+        },
+        {
+          "type": "group_directive",
+          "named": true
+        },
+        {
+          "type": "hdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "iconv_hook_directive",
+          "named": true
+        },
+        {
+          "type": "ifdef_directive",
+          "named": true
+        },
+        {
+          "type": "ifndef_directive",
+          "named": true
+        },
+        {
+          "type": "ignore_directive",
+          "named": true
+        },
+        {
+          "type": "index_format_hook_directive",
+          "named": true
+        },
+        {
+          "type": "lists_directive",
+          "named": true
+        },
+        {
+          "type": "macro_directive",
+          "named": true
+        },
+        {
+          "type": "mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "mailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "mbox_hook_directive",
+          "named": true
+        },
+        {
+          "type": "message_hook_directive",
+          "named": true
+        },
+        {
+          "type": "mime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "mono_directive",
+          "named": true
+        },
+        {
+          "type": "my_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "named_mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "nospam_directive",
+          "named": true
+        },
+        {
+          "type": "open_hook_directive",
+          "named": true
+        },
+        {
+          "type": "push_directive",
+          "named": true
+        },
+        {
+          "type": "reply_hook_directive",
+          "named": true
+        },
+        {
+          "type": "reset_directive",
+          "named": true
+        },
+        {
+          "type": "save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "score_directive",
+          "named": true
+        },
+        {
+          "type": "send2_hook_directive",
+          "named": true
+        },
+        {
+          "type": "send_hook_directive",
+          "named": true
+        },
+        {
+          "type": "set_directive",
+          "named": true
+        },
+        {
+          "type": "setenv_directive",
+          "named": true
+        },
+        {
+          "type": "shutdown_hook_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_pin_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_unpin_directive",
+          "named": true
+        },
+        {
+          "type": "source_directive",
+          "named": true
+        },
+        {
+          "type": "spam_directive",
+          "named": true
+        },
+        {
+          "type": "startup_hook_directive",
+          "named": true
+        },
+        {
+          "type": "subjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_to_directive",
+          "named": true
+        },
+        {
+          "type": "timeout_hook_directive",
+          "named": true
+        },
+        {
+          "type": "toggle_directive",
+          "named": true
+        },
+        {
+          "type": "unalias_directive",
+          "named": true
+        },
+        {
+          "type": "unalternates_directive",
+          "named": true
+        },
+        {
+          "type": "unalternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "unattachments_directive",
+          "named": true
+        },
+        {
+          "type": "unauto_view_directive",
+          "named": true
+        },
+        {
+          "type": "unbind_directive",
+          "named": true
+        },
+        {
+          "type": "uncolor_directive",
+          "named": true
+        },
+        {
+          "type": "ungroup_directive",
+          "named": true
+        },
+        {
+          "type": "unhdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "unhook_directive",
+          "named": true
+        },
+        {
+          "type": "unignore_directive",
+          "named": true
+        },
+        {
+          "type": "unlists_directive",
+          "named": true
+        },
+        {
+          "type": "unmacro_directive",
+          "named": true
+        },
+        {
+          "type": "unmailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "unmailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "unmime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "unmono_directive",
+          "named": true
+        },
+        {
+          "type": "unmy_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "unscore_directive",
+          "named": true
+        },
+        {
+          "type": "unset_directive",
+          "named": true
+        },
+        {
+          "type": "unsetenv_directive",
+          "named": true
+        },
+        {
+          "type": "unsubjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_from_directive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subjectrx_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        },
+        {
+          "type": "replacement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subscribe_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "command_line_option",
+          "named": true
+        },
+        {
+          "type": "group_name",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subscribe_to_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "uri",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "symbol",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "timeout_hook_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "account_hook_directive",
+          "named": true
+        },
+        {
+          "type": "alias_directive",
+          "named": true
+        },
+        {
+          "type": "alternates_directive",
+          "named": true
+        },
+        {
+          "type": "alternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "append_hook_directive",
+          "named": true
+        },
+        {
+          "type": "attachments_directive",
+          "named": true
+        },
+        {
+          "type": "auto_view_directive",
+          "named": true
+        },
+        {
+          "type": "bind_directive",
+          "named": true
+        },
+        {
+          "type": "cd_directive",
+          "named": true
+        },
+        {
+          "type": "charset_hook_directive",
+          "named": true
+        },
+        {
+          "type": "close_hook_directive",
+          "named": true
+        },
+        {
+          "type": "color_directive",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "crypt_hook_directive",
+          "named": true
+        },
+        {
+          "type": "echo_directive",
+          "named": true
+        },
+        {
+          "type": "exec_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_hook_directive",
+          "named": true
+        },
+        {
+          "type": "fcc_save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "finish_directive",
+          "named": true
+        },
+        {
+          "type": "folder_hook_directive",
+          "named": true
+        },
+        {
+          "type": "group_directive",
+          "named": true
+        },
+        {
+          "type": "hdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "iconv_hook_directive",
+          "named": true
+        },
+        {
+          "type": "ifdef_directive",
+          "named": true
+        },
+        {
+          "type": "ifndef_directive",
+          "named": true
+        },
+        {
+          "type": "ignore_directive",
+          "named": true
+        },
+        {
+          "type": "index_format_hook_directive",
+          "named": true
+        },
+        {
+          "type": "lists_directive",
+          "named": true
+        },
+        {
+          "type": "macro_directive",
+          "named": true
+        },
+        {
+          "type": "mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "mailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "mbox_hook_directive",
+          "named": true
+        },
+        {
+          "type": "message_hook_directive",
+          "named": true
+        },
+        {
+          "type": "mime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "mono_directive",
+          "named": true
+        },
+        {
+          "type": "my_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "named_mailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "nospam_directive",
+          "named": true
+        },
+        {
+          "type": "open_hook_directive",
+          "named": true
+        },
+        {
+          "type": "push_directive",
+          "named": true
+        },
+        {
+          "type": "reply_hook_directive",
+          "named": true
+        },
+        {
+          "type": "reset_directive",
+          "named": true
+        },
+        {
+          "type": "save_hook_directive",
+          "named": true
+        },
+        {
+          "type": "score_directive",
+          "named": true
+        },
+        {
+          "type": "send2_hook_directive",
+          "named": true
+        },
+        {
+          "type": "send_hook_directive",
+          "named": true
+        },
+        {
+          "type": "set_directive",
+          "named": true
+        },
+        {
+          "type": "setenv_directive",
+          "named": true
+        },
+        {
+          "type": "shutdown_hook_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_pin_directive",
+          "named": true
+        },
+        {
+          "type": "sidebar_unpin_directive",
+          "named": true
+        },
+        {
+          "type": "source_directive",
+          "named": true
+        },
+        {
+          "type": "spam_directive",
+          "named": true
+        },
+        {
+          "type": "startup_hook_directive",
+          "named": true
+        },
+        {
+          "type": "subjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_directive",
+          "named": true
+        },
+        {
+          "type": "subscribe_to_directive",
+          "named": true
+        },
+        {
+          "type": "timeout_hook_directive",
+          "named": true
+        },
+        {
+          "type": "toggle_directive",
+          "named": true
+        },
+        {
+          "type": "unalias_directive",
+          "named": true
+        },
+        {
+          "type": "unalternates_directive",
+          "named": true
+        },
+        {
+          "type": "unalternative_order_directive",
+          "named": true
+        },
+        {
+          "type": "unattachments_directive",
+          "named": true
+        },
+        {
+          "type": "unauto_view_directive",
+          "named": true
+        },
+        {
+          "type": "unbind_directive",
+          "named": true
+        },
+        {
+          "type": "uncolor_directive",
+          "named": true
+        },
+        {
+          "type": "ungroup_directive",
+          "named": true
+        },
+        {
+          "type": "unhdr_order_directive",
+          "named": true
+        },
+        {
+          "type": "unhook_directive",
+          "named": true
+        },
+        {
+          "type": "unignore_directive",
+          "named": true
+        },
+        {
+          "type": "unlists_directive",
+          "named": true
+        },
+        {
+          "type": "unmacro_directive",
+          "named": true
+        },
+        {
+          "type": "unmailboxes_directive",
+          "named": true
+        },
+        {
+          "type": "unmailto_allow_directive",
+          "named": true
+        },
+        {
+          "type": "unmime_lookup_directive",
+          "named": true
+        },
+        {
+          "type": "unmono_directive",
+          "named": true
+        },
+        {
+          "type": "unmy_hdr_directive",
+          "named": true
+        },
+        {
+          "type": "unscore_directive",
+          "named": true
+        },
+        {
+          "type": "unset_directive",
+          "named": true
+        },
+        {
+          "type": "unsetenv_directive",
+          "named": true
+        },
+        {
+          "type": "unsubjectrx_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_directive",
+          "named": true
+        },
+        {
+          "type": "unsubscribe_from_directive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "toggle_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unalias_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "command_line_option",
+          "named": true
+        },
+        {
+          "type": "group_name",
+          "named": true
+        },
+        {
+          "type": "key",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unalternates_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "command_line_option",
+          "named": true
+        },
+        {
+          "type": "group_name",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unalternative_order_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mime",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unattachments_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "disposition",
+          "named": true
+        },
+        {
+          "type": "mime_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unauto_view_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mime",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unbind_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "key",
+          "named": true
+        },
+        {
+          "type": "map",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "uncolor_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "pattern",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ungroup_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "address",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "command_line_option",
+          "named": true
+        },
+        {
+          "type": "group_name",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unhdr_order_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "header",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unhook_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "hook_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unignore_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unlists_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "command_line_option",
+          "named": true
+        },
+        {
+          "type": "group_name",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unmacro_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "key",
+          "named": true
+        },
+        {
+          "type": "map",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unmailboxes_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mailbox",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unmailto_allow_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "header_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unmime_lookup_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "mime",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unmono_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "pattern",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unmy_hdr_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "header_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unscore_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "pattern",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unset_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unsetenv_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unsubjectrx_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unsubscribe_directive",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "regex",
+            "named": true
+          },
+          {
+            "type": "shell",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "command_line_option",
+          "named": true
+        },
+        {
+          "type": "group_name",
+          "named": true
+        },
+        {
+          "type": "regex",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unsubscribe_from_directive",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "uri",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "uri",
+    "named": true,
+    "fields": {
+      "content": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "shell",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "shell",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "\n",
+    "named": false
+  },
+  {
+    "type": " ",
+    "named": false
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "&",
+    "named": false
+  },
+  {
+    "type": "'",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": "+=",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "-=",
+    "named": false
+  },
+  {
+    "type": "-noregex",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": "?",
+    "named": false
+  },
+  {
+    "type": "`",
+    "named": false
+  },
+  {
+    "type": "account-hook",
+    "named": false
+  },
+  {
+    "type": "alias",
+    "named": false
+  },
+  {
+    "type": "append-hook",
+    "named": false
+  },
+  {
+    "type": "ask-no",
+    "named": false
+  },
+  {
+    "type": "ask-yes",
+    "named": false
+  },
+  {
+    "type": "attach",
+    "named": false
+  },
+  {
+    "type": "attach_headers",
+    "named": false
+  },
+  {
+    "type": "attachment",
+    "named": false
+  },
+  {
+    "type": "black",
+    "named": false
+  },
+  {
+    "type": "blue",
+    "named": false
+  },
+  {
+    "type": "body",
+    "named": false
+  },
+  {
+    "type": "bold",
+    "named": false
+  },
+  {
+    "type": "browser",
+    "named": false
+  },
+  {
+    "type": "charset-hook",
+    "named": false
+  },
+  {
+    "type": "close-hook",
+    "named": false
+  },
+  {
+    "type": "command",
+    "named": true
+  },
+  {
+    "type": "command_line_option",
+    "named": true
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "compose",
+    "named": false
+  },
+  {
+    "type": "crypt-hook",
+    "named": false
+  },
+  {
+    "type": "cyan",
+    "named": false
+  },
+  {
+    "type": "default",
+    "named": false
+  },
+  {
+    "type": "editor",
+    "named": false
+  },
+  {
+    "type": "error",
+    "named": false
+  },
+  {
+    "type": "escape",
+    "named": true
+  },
+  {
+    "type": "fcc-hook",
+    "named": false
+  },
+  {
+    "type": "folder-hook",
+    "named": false
+  },
+  {
+    "type": "function",
+    "named": true
+  },
+  {
+    "type": "generic",
+    "named": false
+  },
+  {
+    "type": "green",
+    "named": false
+  },
+  {
+    "type": "hdrdefault",
+    "named": false
+  },
+  {
+    "type": "header",
+    "named": false
+  },
+  {
+    "type": "iconv-hook",
+    "named": false
+  },
+  {
+    "type": "index",
+    "named": false
+  },
+  {
+    "type": "index_author",
+    "named": false
+  },
+  {
+    "type": "index_collapsed",
+    "named": false
+  },
+  {
+    "type": "index_date",
+    "named": false
+  },
+  {
+    "type": "index_flags",
+    "named": false
+  },
+  {
+    "type": "index_label",
+    "named": false
+  },
+  {
+    "type": "index_number",
+    "named": false
+  },
+  {
+    "type": "index_size",
+    "named": false
+  },
+  {
+    "type": "index_subject",
+    "named": false
+  },
+  {
+    "type": "index_tag",
+    "named": false
+  },
+  {
+    "type": "index_tags",
+    "named": false
+  },
+  {
+    "type": "indicator",
+    "named": false
+  },
+  {
+    "type": "int",
+    "named": true
+  },
+  {
+    "type": "key_name",
+    "named": true
+  },
+  {
+    "type": "magenta",
+    "named": false
+  },
+  {
+    "type": "markers",
+    "named": false
+  },
+  {
+    "type": "mbox-hook",
+    "named": false
+  },
+  {
+    "type": "message",
+    "named": false
+  },
+  {
+    "type": "message-hook",
+    "named": false
+  },
+  {
+    "type": "mime_type",
+    "named": true
+  },
+  {
+    "type": "mix",
+    "named": false
+  },
+  {
+    "type": "no",
+    "named": false
+  },
+  {
+    "type": "none",
+    "named": false
+  },
+  {
+    "type": "normal",
+    "named": false
+  },
+  {
+    "type": "open-hook",
+    "named": false
+  },
+  {
+    "type": "option",
+    "named": true
+  },
+  {
+    "type": "pager",
+    "named": false
+  },
+  {
+    "type": "pgp",
+    "named": false
+  },
+  {
+    "type": "postpone",
+    "named": false
+  },
+  {
+    "type": "progress",
+    "named": false
+  },
+  {
+    "type": "prompt",
+    "named": false
+  },
+  {
+    "type": "query",
+    "named": false
+  },
+  {
+    "type": "red",
+    "named": false
+  },
+  {
+    "type": "regex",
+    "named": true
+  },
+  {
+    "type": "reply-hook",
+    "named": false
+  },
+  {
+    "type": "reverse",
+    "named": false
+  },
+  {
+    "type": "save-hook",
+    "named": false
+  },
+  {
+    "type": "search",
+    "named": false
+  },
+  {
+    "type": "security_both",
+    "named": false
+  },
+  {
+    "type": "security_encrypt",
+    "named": false
+  },
+  {
+    "type": "security_none",
+    "named": false
+  },
+  {
+    "type": "security_sign",
+    "named": false
+  },
+  {
+    "type": "send-hook",
+    "named": false
+  },
+  {
+    "type": "send2-hook",
+    "named": false
+  },
+  {
+    "type": "shell",
+    "named": true
+  },
+  {
+    "type": "shutdown-hook",
+    "named": false
+  },
+  {
+    "type": "sidebar_background",
+    "named": false
+  },
+  {
+    "type": "sidebar_divider",
+    "named": false
+  },
+  {
+    "type": "sidebar_flagged",
+    "named": false
+  },
+  {
+    "type": "sidebar_highlight",
+    "named": false
+  },
+  {
+    "type": "sidebar_indicator",
+    "named": false
+  },
+  {
+    "type": "sidebar_new",
+    "named": false
+  },
+  {
+    "type": "sidebar_ordinary",
+    "named": false
+  },
+  {
+    "type": "sidebar_spool_file",
+    "named": false
+  },
+  {
+    "type": "signature",
+    "named": false
+  },
+  {
+    "type": "smime",
+    "named": false
+  },
+  {
+    "type": "standout",
+    "named": false
+  },
+  {
+    "type": "startup-hook",
+    "named": false
+  },
+  {
+    "type": "status",
+    "named": false
+  },
+  {
+    "type": "string",
+    "named": true
+  },
+  {
+    "type": "sub_mime_type",
+    "named": true
+  },
+  {
+    "type": "tilde",
+    "named": false
+  },
+  {
+    "type": "timeout-hook",
+    "named": false
+  },
+  {
+    "type": "tree",
+    "named": false
+  },
+  {
+    "type": "underline",
+    "named": false
+  },
+  {
+    "type": "value",
+    "named": true
+  },
+  {
+    "type": "white",
+    "named": false
+  },
+  {
+    "type": "yellow",
+    "named": false
+  },
+  {
+    "type": "yes",
+    "named": false
+  }
+]

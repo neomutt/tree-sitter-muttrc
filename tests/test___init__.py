@@ -15,7 +15,7 @@ class Test:
         :rtype: None
         """
         with open(
-            os.path.join(os.path.dirname(__file__), "muttrc"), "rb"
+            os.path.join(os.path.dirname(__file__), "neomuttrc"), "rb"
         ) as f:
             text = f.read()
         tree = parser.parse(text)
