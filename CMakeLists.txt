@@ -3,18 +3,19 @@ string(REGEX MATCH [[[0-9](\.[0-9])*]] VERSION "$ENV{GITHUB_REF_NAME}")
 if(NOT VERSION)
   set(VERSION 0.0.0.0)
 endif()
-if("$ENV{GITHUB_REPOSITORY}")
+if(ENV{GITHUB_REPOSITORY})
   set(HOMEPAGE_URL "https://github.com/$ENV{GITHUB_REPOSITORY}")
-  string(REGEX REPLACE ".*/tree-sitter-([^/]*)$" "\\1" LANGUAGE ${HOMEPAGE_URL})
+  string(REGEX REPLACE ".*/tree-sitter-([^/]*)$" "\\1" LANGUAGE $ENV{GITHUB_REPOSITORY})
 else()
   set(HOMEPAGE_URL "")
-  string(REGEX REPLACE ".*/tree-sitter-([^/]*)$" "\\1" LANGUAGE ${CMAKE_CURRENT_SOURCE_DIR})
+  file(GLOB LANGUAGE "${CMAKE_CURRENT_SOURCE_DIR}/bindings/python/*")
+  string(REGEX REPLACE ".*/tree_sitter_([^/]*)$" "\\1" LANGUAGE ${LANGUAGE})
 endif()
 project(
   tree-sitter-${LANGUAGE}
   VERSION ${VERSION}
   DESCRIPTION tree-sitter-${LANGUAGE}
-  HOMEPAGE_URL ${HOMEPAGE_URL})
+  HOMEPAGE_URL "${HOMEPAGE_URL}")
 include_directories(src)
 add_library(${LANGUAGE} SHARED src/parser.c)
 set_target_properties(${LANGUAGE} PROPERTIES PREFIX "")
