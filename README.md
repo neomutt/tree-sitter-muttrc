@@ -65,6 +65,9 @@ It can be used by:
       your `~/.config/tree-sitter/config.json`
 - Language servers
   - [zathura-language-server](https://github.com/Freed-Wu/zathura-language-server)
+  - [vscode-anycode](https://github.com/microsoft/vscode-anycode)
+  - [Navigating code on GitHub](https://docs.github.com/en/repositories/working-with-files/using-files/navigating-code-on-github):
+    supported by [semantic](https://github.com/github/semantic)
 - Libraries
   - [tree-sitter-zathurarc](https://www.npmjs.com/package/tree-sitter-zathurarc):
     for node
