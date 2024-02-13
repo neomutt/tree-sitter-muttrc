@@ -3,8 +3,13 @@ string(REGEX MATCH [[[0-9](\.[0-9])*]] VERSION "$ENV{GITHUB_REF_NAME}")
 if(NOT VERSION)
   set(VERSION 0.0.0.0)
 endif()
-set(HOMEPAGE_URL https://github.com/Freed-Wu/tree-sitter-zathurarc)
-string(REGEX REPLACE ".*/tree-sitter-([^/]*)$" "\\1" LANGUAGE ${HOMEPAGE_URL})
+if("$ENV{GITHUB_REPOSITORY}")
+  set(HOMEPAGE_URL "https://github.com/$ENV{GITHUB_REPOSITORY}")
+  string(REGEX REPLACE ".*/tree-sitter-([^/]*)$" "\\1" LANGUAGE ${HOMEPAGE_URL})
+else()
+  set(HOMEPAGE_URL "")
+  string(REGEX REPLACE ".*/tree-sitter-([^/]*)$" "\\1" LANGUAGE ${CMAKE_CURRENT_SOURCE_DIR})
+endif()
 project(
   tree-sitter-${LANGUAGE}
   VERSION ${VERSION}
