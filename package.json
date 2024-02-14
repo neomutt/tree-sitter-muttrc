@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-muttrc",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "muttrc grammar for tree-sitter",
   "main": "bindings/node",
   "keywords": [
