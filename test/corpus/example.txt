@@ -2,47 +2,81 @@
 Example
 =======
 
-# test
-include desktop/muttrc
-map [normal] <Esc> zoom in#with argument
-map <F1> recolor          #without argument
-set recolor false
-unmap <F1>
-unmap [normal] <Esc>
+bind pager,index \ch<BackSpace> sidebar-toggle-visible
+set & allow_ansi ? allow_ansi noallow_ansi
+set allow_ansi=yes
+set sleep_time = 0
+set real_name = $DEBFULLNAME
+set ispell = aspell
+set query_command = 'mutt_ldap_query.pl %s'
+set signature = "echo Best Regards$'\n'$DEBFULLNAME|"
+set imap_pass = `pass ls password/$USER`
+mailboxes $spool_file $postponed $record $trash \
++[Gmail]/Spam +[Gmail]/Starred
+sidebar_unpin *
+source ~/.config/neomutt/neomuttrc
 
 ---
 
 (file
-  (comment)
-  (include_directive
+  (bind_directive
     (command)
-    (path))
-  (map_directive
-    (command)
-    (mode
-      (mode_name))
+    (map)
+    (map)
     (key
-      (key_name))
-    (function)
-    (argument))
-  (comment)
-  (map_directive
-    (command)
-    (key
+      (escape)
       (key_name))
     (function))
-  (comment)
   (set_directive
     (command)
     (option)
-    (bool))
-  (unmap_directive
+    (option)
+    (option))
+  (set_directive
     (command)
-    (key
-      (key_name)))
-  (unmap_directive
+    (option)
+    (quadoption))
+  (set_directive
     (command)
-    (mode
-      (mode_name))
-    (key
-      (key_name))))
+    (option)
+    (int))
+  (set_directive
+    (command)
+    (option)
+    (shell))
+  (set_directive
+    (command)
+    (option)
+    (shell))
+  (set_directive
+    (command)
+    (option)
+    (string))
+  (set_directive
+    (command)
+    (option)
+    (shell))
+  (set_directive
+    (command)
+    (option)
+    (shell))
+  (mailboxes_directive
+    (command)
+    (mailbox
+      (shell))
+    (mailbox
+      (shell))
+    (mailbox
+      (shell))
+    (mailbox
+      (shell))
+    (mailbox
+      (shell))
+    (mailbox
+      (shell)))
+  (sidebar_unpin_directive
+    (command))
+  (source_directive
+    (command)
+    (path
+      (shell))))
