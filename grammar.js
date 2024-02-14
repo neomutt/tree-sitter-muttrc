@@ -427,19 +427,15 @@ module.exports = grammar({
       ),
     unhook_directive: ($) => command($, "unhook", choice("*", $.hook_type)),
 
-    set_directive: ($) =>
-      command(
-        $,
-        "set",
-        choice(
-          seq(
-            $.option,
-            optional(" "),
-            choice("+=", "-=", "="),
-            optional(" "),
-            choice($.int, $.quadoption, $._string)
-          ),
-          $._options2
+    set_directive: ($) => command($, "set", choice($._options2, $._options3)),
+    _options3: ($) =>
+      spaceSep1(
+        seq(
+          $.option,
+          optional(" "),
+          choice("+=", "-=", "="),
+          optional(" "),
+          choice($.int, $.quadoption, $._string)
         )
       ),
     _options2: ($) => spaceSep1(seq(optional(choice("&", "?")), $.option)),

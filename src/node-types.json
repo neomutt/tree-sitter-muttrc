@@ -4868,7 +4868,7 @@
     "named": true,
     "fields": {
       "content": {
-        "multiple": false,
+        "multiple": true,
         "required": false,
         "types": [
           {

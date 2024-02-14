@@ -1,9 +1,7 @@
 bind pager,index \ch<BackSpace> sidebar-toggle-visible
 set & allow_ansi ? allow_ansi noallow_ansi
-set allow_ansi=yes
-set sleep_time = 0
+set allow_ansi=yes sleep_time = 0 ispell = aspell
 set real_name = $DEBFULLNAME
-set ispell = aspell
 set query_command = 'mutt_ldap_query.pl %s'
 set signature = "echo Best Regards$'\n'$DEBFULLNAME|"
 set imap_pass = `pass ls password/$USER`
