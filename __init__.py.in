@@ -7,18 +7,9 @@ import sysconfig
 
 from tree_sitter import Language, Parser
 
-from . import __name__ as NAME
-
-NAME = NAME.split("_")[-1]
-DLL = sysconfig.get_config_var("SHLIB_SUFFIX")
-if DLL is None:
-    DLL = ".dll"
-
-try:
-    from ._version import __version__, __version_tuple__  # type: ignore
-except ImportError:  # for setuptools-generate
-    __version__ = "rolling"
-    __version_tuple__ = (0, 0, 0, __version__, "")
+__version__ = "@VERSION@"
+NAME = "@NAME@"
+DLL = "@CMAKE_SHARED_LIBRARY_SUFFIX@"
 
 paths = [
     os.path.join(
