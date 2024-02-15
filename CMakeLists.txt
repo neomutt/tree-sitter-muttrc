@@ -5,27 +5,32 @@ if(NOT VERSION)
 endif()
 if(ENV{GITHUB_REPOSITORY})
   set(HOMEPAGE_URL "https://github.com/$ENV{GITHUB_REPOSITORY}")
-  string(REGEX REPLACE ".*/tree-sitter-([^/]*)$" "\\1" LANGUAGE $ENV{GITHUB_REPOSITORY})
+  string(REGEX REPLACE ".*/tree-sitter-([^/]*)$" "\\1" NAME $ENV{GITHUB_REPOSITORY})
 else()
   set(HOMEPAGE_URL "")
-  file(GLOB LANGUAGE "${CMAKE_CURRENT_SOURCE_DIR}/bindings/python/*")
-  string(REGEX REPLACE ".*/tree_sitter_([^/]*)$" "\\1" LANGUAGE ${LANGUAGE})
+  file(GLOB NAME "${CMAKE_CURRENT_SOURCE_DIR}/bindings/python/*")
+  string(REGEX REPLACE ".*/tree_sitter_([^/]*)$" "\\1" NAME ${NAME})
 endif()
 project(
-  tree-sitter-${LANGUAGE}
+  tree-sitter-${NAME}
   VERSION ${VERSION}
-  DESCRIPTION tree-sitter-${LANGUAGE}
+  DESCRIPTION tree-sitter-${NAME}
   HOMEPAGE_URL "${HOMEPAGE_URL}")
 include_directories(src)
-add_library(${LANGUAGE} SHARED src/parser.c)
-set_target_properties(${LANGUAGE} PROPERTIES PREFIX "")
+add_library(${NAME} SHARED src/parser.c)
+set_target_properties(${NAME} PROPERTIES PREFIX "")
 if(DEFINED SKBUILD_DATA_DIR)
   set(CMAKE_INSTALL_FULL_LIBDIR ${SKBUILD_DATA_DIR}/lib)
+endif()
+# https://docs.python.org/3/library/ctypes.html#finding-shared-libraries
+if(DEFINED SKBUILD_PLATLIB_DIR)
+  # it may be better to determine the shared library name at development time, and hardcode that into the wrapper module
+  configure_file(__init__.py.in ${SKBUILD_PLATLIB_DIR}/tree_sitter_${NAME}/__init__.py)
 endif()
 if(NOT DEFINED CMAKE_INSTALL_FULL_LIBDIR)
   include(GNUInstallDirs)
 endif()
-install(TARGETS ${LANGUAGE} DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}/parser)
+install(TARGETS ${NAME} DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}/parser)
 
 set(CPACK_PACKAGE_CONTACT ${HOMEPAGE_URL}/issues)
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Wu Zhenyu <wuzhenyu@ustc.edu>")
