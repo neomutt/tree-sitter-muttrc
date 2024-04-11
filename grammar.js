@@ -475,7 +475,7 @@ module.exports = grammar({
         quoted_string("`", $.shell),
         alias($._word, $.regex),
       ),
-    _word: (_) => /([^"'`\s])(\S|\\\s)*/,
+    _word: (_) => /(\\\r?\n|[^"'`\s])(\S|\\\s)*/,
 
     source_directive: ($) => command($, "source", alias($._string, $.path)),
 

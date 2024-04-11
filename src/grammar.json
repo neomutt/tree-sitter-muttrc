@@ -1175,6 +1175,10 @@
         },
         {
           "type": "STRING",
+          "value": "body"
+        },
+        {
+          "type": "STRING",
           "value": "bold"
         },
         {
@@ -1184,6 +1188,14 @@
         {
           "type": "STRING",
           "value": "hdrdefault"
+        },
+        {
+          "type": "STRING",
+          "value": "header"
+        },
+        {
+          "type": "STRING",
+          "value": "index"
         },
         {
           "type": "STRING",
@@ -1316,15 +1328,7 @@
       "members": [
         {
           "type": "STRING",
-          "value": "body"
-        },
-        {
-          "type": "STRING",
           "value": "header"
-        },
-        {
-          "type": "STRING",
-          "value": "index"
         },
         {
           "type": "STRING",
@@ -1492,12 +1496,28 @@
                 {
                   "type": "SYMBOL",
                   "name": "background"
+                },
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "_regex"
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
                 }
               ]
             },
             {
               "type": "SEQ",
               "members": [
+                {
+                  "type": "STRING",
+                  "value": "compose"
+                },
                 {
                   "type": "SYMBOL",
                   "name": "composeobject"
@@ -1521,10 +1541,6 @@
                 {
                   "type": "SYMBOL",
                   "name": "background"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_regex"
                 }
               ]
             }
@@ -3880,7 +3896,7 @@
     },
     "_word": {
       "type": "PATTERN",
-      "value": "([^\"'`\\s])(\\S|\\\\\\s)*"
+      "value": "(\\\\\\r?\\n|[^\"'`\\s])(\\S|\\\\\\s)*"
     },
     "source_directive": {
       "type": "SEQ",
