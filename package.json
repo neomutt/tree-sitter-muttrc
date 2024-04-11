@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-muttrc",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Muttrc grammar for tree-sitter",
   "repository": "github:tree-sitter/tree-sitter-muttrc",
   "license": "MIT",
