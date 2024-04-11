@@ -258,7 +258,7 @@ module.exports = grammar({
             optional($._attributes),
             $.foreground,
             $.background,
-            $._regex
+            optional($._regex)
           ),
           seq(
             "compose",
@@ -467,7 +467,6 @@ module.exports = grammar({
         quoted_string('"', $.shell),
         quoted_string("`", $.shell),
         alias($._word, $.shell),
-        "\n"
       ),
     _regex: ($) =>
       choice(
@@ -475,9 +474,8 @@ module.exports = grammar({
         quoted_string('"', $.regex),
         quoted_string("`", $.shell),
         alias($._word, $.regex),
-        "\n"
       ),
-    _word: (_) => /(\\\r?\n|[^"'`\s])(\S|\\\s)*/,
+    _word: (_) => /([^"'`\s])(\S|\\\s)*/,
 
     source_directive: ($) => command($, "source", alias($._string, $.path)),
 
@@ -508,7 +506,7 @@ function quoted_string(char, name) {
   return seq(
     char,
     alias(
-      field("content", new RegExp("([^" + char + "]|\\\\" + char + ")+")),
+      field("content", new RegExp("([^" + char + "]|\\\\" + char + ")*")),
       name
     ),
     char

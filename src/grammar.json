@@ -1175,10 +1175,6 @@
         },
         {
           "type": "STRING",
-          "value": "body"
-        },
-        {
-          "type": "STRING",
           "value": "bold"
         },
         {
@@ -1188,14 +1184,6 @@
         {
           "type": "STRING",
           "value": "hdrdefault"
-        },
-        {
-          "type": "STRING",
-          "value": "header"
-        },
-        {
-          "type": "STRING",
-          "value": "index"
         },
         {
           "type": "STRING",
@@ -1328,7 +1316,15 @@
       "members": [
         {
           "type": "STRING",
+          "value": "body"
+        },
+        {
+          "type": "STRING",
           "value": "header"
+        },
+        {
+          "type": "STRING",
+          "value": "index"
         },
         {
           "type": "STRING",
@@ -1496,20 +1492,12 @@
                 {
                   "type": "SYMBOL",
                   "name": "background"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "_regex"
                 }
               ]
             },
             {
               "type": "SEQ",
               "members": [
-                {
-                  "type": "STRING",
-                  "value": "compose"
-                },
                 {
                   "type": "SYMBOL",
                   "name": "composeobject"
@@ -1533,6 +1521,10 @@
                 {
                   "type": "SYMBOL",
                   "name": "background"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_regex"
                 }
               ]
             }
@@ -3719,7 +3711,7 @@
                 "name": "content",
                 "content": {
                   "type": "PATTERN",
-                  "value": "([^']|\\\\')+"
+                  "value": "([^']|\\\\')*"
                 }
               },
               "named": true,
@@ -3745,7 +3737,7 @@
                 "name": "content",
                 "content": {
                   "type": "PATTERN",
-                  "value": "([^\"]|\\\\\")+"
+                  "value": "([^\"]|\\\\\")*"
                 }
               },
               "named": true,
@@ -3771,7 +3763,7 @@
                 "name": "content",
                 "content": {
                   "type": "PATTERN",
-                  "value": "([^`]|\\\\`)+"
+                  "value": "([^`]|\\\\`)*"
                 }
               },
               "named": true,
@@ -3791,10 +3783,6 @@
           },
           "named": true,
           "value": "shell"
-        },
-        {
-          "type": "STRING",
-          "value": "\n"
         }
       ]
     },
@@ -3815,7 +3803,7 @@
                 "name": "content",
                 "content": {
                   "type": "PATTERN",
-                  "value": "([^']|\\\\')+"
+                  "value": "([^']|\\\\')*"
                 }
               },
               "named": true,
@@ -3841,7 +3829,7 @@
                 "name": "content",
                 "content": {
                   "type": "PATTERN",
-                  "value": "([^\"]|\\\\\")+"
+                  "value": "([^\"]|\\\\\")*"
                 }
               },
               "named": true,
@@ -3867,7 +3855,7 @@
                 "name": "content",
                 "content": {
                   "type": "PATTERN",
-                  "value": "([^`]|\\\\`)+"
+                  "value": "([^`]|\\\\`)*"
                 }
               },
               "named": true,
@@ -3887,16 +3875,12 @@
           },
           "named": true,
           "value": "regex"
-        },
-        {
-          "type": "STRING",
-          "value": "\n"
         }
       ]
     },
     "_word": {
       "type": "PATTERN",
-      "value": "(\\\\\\r?\\n|[^\"'`\\s])(\\S|\\\\\\s)*"
+      "value": "([^\"'`\\s])(\\S|\\\\\\s)*"
     },
     "source_directive": {
       "type": "SEQ",
