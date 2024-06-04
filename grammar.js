@@ -333,7 +333,7 @@ module.exports = grammar({
       command($, "unsubscribe", $._group, choice("*", $._regexes)),
 
     sequence: ($) => $._string,
-    macro_directive: ($) => command($, "macro", $._maps, $.key, $.sequence),
+    macro_directive: ($) => command($, "macro", $._maps, $.key, $.sequence, optional($.description)),
     unmacro_directive: ($) =>
       command($, "unmacro", choice("*", $._maps), $.key),
 
