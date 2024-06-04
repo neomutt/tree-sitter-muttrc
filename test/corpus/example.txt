@@ -15,6 +15,7 @@ mailboxes $spool_file $postponed $record $trash \
 +[Gmail]/Spam +[Gmail]/Starred
 sidebar_unpin *
 source ~/.config/neomutt/neomuttrc
+macro index D '<save-message>+Trash<enter>' 'move message to the trash'
 
 ---
 
@@ -79,4 +80,12 @@ source ~/.config/neomutt/neomuttrc
   (source_directive
     (command)
     (path
-      (shell))))
+      (shell)))
+  (macro_directive
+    (command)
+    (map)
+    (key)
+    (sequence
+      content: (string))
+    (description
+      content: (string))))
