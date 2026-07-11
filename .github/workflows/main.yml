@@ -95,8 +95,6 @@ jobs:
       - name: Install dependencies
         run: |
           luarocks install tree-sitter-cli
-          mkdir queries/muttrc
-          mv queries/*.scm queries/muttrc
       - uses: lumen-oss/luarocks-tag-release@v7
         env:
           LUAROCKS_API_KEY: ${{secrets.LUAROCKS_API_KEY}}
