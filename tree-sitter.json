@@ -1,0 +1,42 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "muttrc",
+      "camelcase": "Muttrc",
+      "title": "Muttrc",
+      "scope": "source.muttrc",
+      "file-types": [
+        "muttrc"
+      ],
+      "injection-regex": "^muttrc$",
+      "class-name": "TreeSitterMuttrc"
+    }
+  ],
+  "metadata": {
+    "version": "0.0.6",
+    "license": "MIT",
+    "description": "config file for mutt/neomutt",
+    "authors": [
+      {
+        "name": "Wu",
+        "email": "wuzhenyu@ustc.edu",
+        "url": "https://github.com/Freed-Wu/"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/neomutt/tree-sitter-muttrc",
+      "funding": "https://github.com/neomutt/tree-sitter-muttrc"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "java": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": true
+  }
+}
