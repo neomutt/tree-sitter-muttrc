@@ -39,6 +39,5 @@ end
 
 build = {
   type = "treesitter-parser",
-  copy_directories = {'queries'},
   lang = "muttrc",
 }
