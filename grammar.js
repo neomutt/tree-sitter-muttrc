@@ -374,7 +374,12 @@ module.exports = grammar({
     unmy_hdr_directive: ($) =>
       command($, "unmy_hdr", choice("*", $.header_field)),
 
-    shell_command: ($) => $._string,
+    shell_command: ($) => choice(
+        quoted_string("'", $.shell),
+        quoted_string('"', $.shell),
+        quoted_string("`", $.shell),
+        alias($._word, $.shell),
+      ),
     open_hook_directive: ($) =>
       command($, "open-hook", $._regex, $.shell_command),
     close_hook_directive: ($) =>
@@ -466,9 +471,9 @@ module.exports = grammar({
     _string: ($) =>
       choice(
         quoted_string("'", $.string),
-        quoted_string('"', $.shell),
+        quoted_string('"', $.string),
         quoted_string("`", $.shell),
-        alias($._word, $.shell),
+        alias($._word, $.string),
       ),
     _regex: ($) =>
       choice(

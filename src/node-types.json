@@ -215,10 +215,6 @@
           "named": true
         },
         {
-          "type": "shell",
-          "named": true
-        },
-        {
           "type": "shutdown_hook_directive",
           "named": true
         },
@@ -240,6 +236,10 @@
         },
         {
           "type": "startup_hook_directive",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         },
         {
@@ -385,7 +385,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -415,7 +415,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -683,7 +683,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -876,7 +876,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -906,7 +906,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -936,7 +936,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -1790,7 +1790,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -1866,7 +1866,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -1915,7 +1915,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -1945,7 +1945,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -2697,7 +2697,7 @@
           "named": true
         },
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -2739,7 +2739,7 @@
           "named": true
         },
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -2788,7 +2788,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -2891,7 +2891,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -3002,7 +3002,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -3467,7 +3467,7 @@
           "named": true
         },
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -3497,7 +3497,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -3627,7 +3627,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -3657,7 +3657,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -3691,7 +3691,7 @@
           "named": true
         },
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -3726,7 +3726,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -4862,7 +4862,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -4908,7 +4908,7 @@
           "named": true
         },
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -4947,10 +4947,6 @@
         "types": [
           {
             "type": "shell",
-            "named": true
-          },
-          {
-            "type": "string",
             "named": true
           }
         ]
@@ -5871,7 +5867,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -6523,7 +6519,7 @@
           "named": true
         },
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
@@ -6865,7 +6861,7 @@
       "required": false,
       "types": [
         {
-          "type": "shell",
+          "type": "string",
           "named": true
         }
       ]
