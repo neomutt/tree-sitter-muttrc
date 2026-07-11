@@ -2849,6 +2849,10 @@
           "named": true
         },
         {
+          "type": "description",
+          "named": true
+        },
+        {
           "type": "key",
           "named": true
         },

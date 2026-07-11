@@ -2220,6 +2220,18 @@
         {
           "type": "SYMBOL",
           "name": "sequence"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "description"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },

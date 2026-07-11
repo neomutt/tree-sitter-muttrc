@@ -78,6 +78,18 @@ It can be used by:
   - [tree-sitter-languages](https://github.com/grantjenks/py-tree-sitter-languages):
     for python
 
+## Optional Dependencies
+
+- [tree-sitter-expando](https://github.com/neomutt/tree-sitter-expando)
+
+Before:
+
+![before](https://github.com/user-attachments/assets/f6d79eef-3281-4be6-8697-83f15f6d1c91)
+
+After:
+
+![after](https://github.com/user-attachments/assets/5bc78d28-b944-455b-a68e-36f2ceccdb81)
+
 ## Related Projects
 
 - [neomutt.vim](https://github.com/neomutt/neomutt.vim): vim syntax
