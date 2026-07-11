@@ -22,8 +22,6 @@ description = {
   license = 'MIT',
 }
 
-build_dependencies = { "tree-sitter-cli" }
-
 dependencies = { "lua >= 5.1" }
 
 test_dependencies = {}
