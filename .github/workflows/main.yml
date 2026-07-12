@@ -28,10 +28,10 @@ jobs:
           registry-url: https://registry.npmjs.org
       - name: Install dependencies
         run: |
-          yarn
+          npm install -g tree-sitter
       - name: Test
         run: |
-          npm test
+          tree-sitter test
 
   deploy-npm:
     runs-on: ubuntu-latest
