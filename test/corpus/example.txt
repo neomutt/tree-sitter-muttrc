@@ -1,7 +1,6 @@
 =======
 Example
 =======
-
 bind pager,index \ch<BackSpace> sidebar-toggle-visible
 set & allow_ansi ? allow_ansi noallow_ansi
 set allow_ansi=yes
@@ -11,14 +10,12 @@ set ispell = aspell
 set query_command = 'mutt_ldap_query.pl %s'
 set signature = "echo Best Regards$'\n'$DEBFULLNAME|"
 set imap_pass = `pass ls password/$USER`
-mailboxes $spool_file $postponed $record $trash \
-+[Gmail]/Spam +[Gmail]/Starred
+mailboxes $spool_file $postponed $record $trash
 sidebar_unpin *
 source ~/.config/neomutt/neomuttrc
 macro index D '<save-message>+Trash<enter>' 'move message to the trash'
 
 ---
-
 (file
   (bind_directive
     (command)
@@ -44,11 +41,15 @@ macro index D '<save-message>+Trash<enter>' 'move message to the trash'
   (set_directive
     (command)
     (option)
-    (shell))
+    (string))
   (set_directive
     (command)
     (option)
-    (shell))
+    (string))
+  (set_directive
+    (command)
+    (option)
+    (string))
   (set_directive
     (command)
     (option)
@@ -57,35 +58,27 @@ macro index D '<save-message>+Trash<enter>' 'move message to the trash'
     (command)
     (option)
     (shell))
-  (set_directive
-    (command)
-    (option)
-    (shell))
   (mailboxes_directive
     (command)
     (mailbox
-      (shell))
+      (string))
     (mailbox
-      (shell))
+      (string))
     (mailbox
-      (shell))
+      (string))
     (mailbox
-      (shell))
-    (mailbox
-      (shell))
-    (mailbox
-      (shell)))
+      (string)))
   (sidebar_unpin_directive
     (command))
   (source_directive
     (command)
     (path
-      (shell)))
+      (string)))
   (macro_directive
     (command)
     (map)
     (key)
     (sequence
-      content: (string))
+      (string))
     (description
-      content: (string))))
+      (string))))
