@@ -1,19 +1,16 @@
+========================================
+comment: start of line
+========================================
+# Foo
+
+---
+(file
+  (comment))
+
 =======
-Example
+Bind
 =======
 bind pager,index \ch<BackSpace> sidebar-toggle-visible
-set & allow_ansi ? allow_ansi noallow_ansi
-set allow_ansi=yes
-set sleep_time = 0
-set real_name = $DEBFULLNAME
-set ispell = aspell
-set query_command = 'mutt_ldap_query.pl %s'
-set signature = "echo Best Regards$'\n'$DEBFULLNAME|"
-set imap_pass = `pass ls password/$USER`
-mailboxes $spool_file $postponed $record $trash
-sidebar_unpin *
-source ~/.config/neomutt/neomuttrc
-macro index D '<save-message>+Trash<enter>' 'move message to the trash'
 
 ---
 (file
@@ -24,12 +21,109 @@ macro index D '<save-message>+Trash<enter>' 'move message to the trash'
     (key
       (escape)
       (key_name))
-    (function))
+    (function)))
+
+=======
+sidebar_unpin
+=======
+sidebar_unpin *
+
+---
+(file
+  (sidebar_unpin_directive
+    (command)))
+
+=======
+Source
+=======
+source ~/.config/neomutt/neomuttrc
+
+---
+(file
+  (source_directive
+    (command)
+    (path
+      (string))))
+
+=======
+Macro
+=======
+macro index D '<save-message>+Trash<enter>' 'move message to the trash'
+
+---
+(file
+  (macro_directive
+    (command)
+    (map)
+    (key)
+    (sequence
+      (string))
+    (description
+      (string))))
+
+=======
+mailboxes
+=======
+mailboxes $spool_file $postponed $record $trash
+
+---
+(file
+  (mailboxes_directive
+    (command)
+    (mailbox
+      (string))
+    (mailbox
+      (string))
+    (mailbox
+      (string))
+    (mailbox
+      (string))))
+
+=======
+Shell
+=======
+set imap_pass = `pass ls password/$USER`
+
+---
+(file
   (set_directive
     (command)
     (option)
+    (shell)))
+
+=======
+Double Quote
+=======
+set signature = "echo Best Regards$'\n'$DEBFULLNAME|"
+
+---
+(file
+  (set_directive
+    (command)
     (option)
-    (option))
+    (string)))
+
+=======
+Single Quote
+=======
+set query_command = 'mutt_ldap_query.pl %s'
+
+---
+(file
+  (set_directive
+    (command)
+    (option)
+    (string)))
+
+=======
+Assign
+=======
+set allow_ansi=yes
+set sleep_time = 0
+set ispell = aspell
+
+---
+(file
   (set_directive
     (command)
     (option)
@@ -41,44 +135,17 @@ macro index D '<save-message>+Trash<enter>' 'move message to the trash'
   (set_directive
     (command)
     (option)
-    (string))
+    (string)))
+
+=======
+Complex Assign
+=======
+set & allow_ansi ? allow_ansi noallow_ansi
+
+---
+(file
   (set_directive
     (command)
     (option)
-    (string))
-  (set_directive
-    (command)
     (option)
-    (string))
-  (set_directive
-    (command)
-    (option)
-    (string))
-  (set_directive
-    (command)
-    (option)
-    (shell))
-  (mailboxes_directive
-    (command)
-    (mailbox
-      (string))
-    (mailbox
-      (string))
-    (mailbox
-      (string))
-    (mailbox
-      (string)))
-  (sidebar_unpin_directive
-    (command))
-  (source_directive
-    (command)
-    (path
-      (string)))
-  (macro_directive
-    (command)
-    (map)
-    (key)
-    (sequence
-      (string))
-    (description
-      (string))))
+    (option)))
