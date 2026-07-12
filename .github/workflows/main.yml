@@ -28,7 +28,7 @@ jobs:
           registry-url: https://registry.npmjs.org
       - name: Install dependencies
         run: |
-          npm install -g tree-sitter
+          npm install -g tree-sitter-cli
       - name: Test
         run: |
           tree-sitter test
