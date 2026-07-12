@@ -3,12 +3,21 @@
 module.exports = grammar({
   name: "muttrc",
 
-  extras: (_) => [/\s/, /\\\r?\n/],
+  extras: $ => [/\s/, /\\\r?\n/, $.comment, /\\( |\t|\v|\f)/],
 
   rules: {
-    file: ($) => repeat(seq(optional($._command), $._end)),
+    file: $ => optional($._statements),
 
-    _command: ($) =>
+    _statements: $ => seq(
+      repeat(seq(
+        $._statement,
+        $._terminator,
+      )),
+      $._statement,
+      optional($._terminator),
+    ),
+
+    _statement: $ =>
       choice(
         $.alias_directive,
         $.alternates_directive,
@@ -94,19 +103,19 @@ module.exports = grammar({
         $.unsubscribe_from_directive
       ),
 
-    account_hook_directive: ($) =>
-      command($, "account-hook", $._string, $._command),
+    account_hook_directive: $ =>
+      command($, "account-hook", $._string, $._statement),
 
-    group_name: ($) => $._string,
-    // TODO: support more `group_name`s
-    _group: ($) => seq(alias("-group", $.command_line_option), $.group_name),
-    _addresses: ($) => commaSep1($.address),
-    alias_directive: ($) =>
+    group_name: _ => /[^-]\S*/,
+    _group_names: $ => repeat1($.group_name),
+    _group: $ => seq(alias("-group", $.command_line_option), $._group_names),
+    _addresses: $ => commaSep1($.address),
+    alias_directive: $ =>
       command($, "alias", optional($._group), $.key, $._addresses),
-    address: ($) => $._string,
-    unalias_directive: ($) =>
+    address: $ => $._string,
+    unalias_directive: $ =>
       command($, "unalias", optional($._group), choice("*", $.key)),
-    key: ($) =>
+    key: $ =>
       repeat1(
         choice(
           seq("<", alias(/[a-zA-Z-]+/, $.key_name), ">"),
@@ -115,22 +124,22 @@ module.exports = grammar({
         )
       ),
 
-    _regexes: ($) => spaceSep1($._regex),
-    alternates_directive: ($) =>
+    _regexes: $ => repeat1($._regex),
+    alternates_directive: $ =>
       command($, "alternates", optional($._group), $._regexes),
-    unalternates_directive: ($) =>
+    unalternates_directive: $ =>
       command($, "unalternates", optional($._group), choice("*", $._regexes)),
-    alternative_order_directive: ($) =>
+    alternative_order_directive: $ =>
       command($, "alternative_order", $._mimes),
-    unalternative_order_directive: ($) =>
+    unalternative_order_directive: $ =>
       command($, "unalternative_order", choice("*", $._mimes)),
-    mime_type: (_) => /[-.a-zA-Z\d]+/,
-    mime: ($) =>
+    mime_type: _ => /[-.a-zA-Z\d]+/,
+    mime: $ =>
       seq($.mime_type, optional(seq("/", alias($.mime_type, $.sub_mime_type)))),
-    _mime_types: ($) => spaceSep1($.mime_type),
-    _mimes: ($) => spaceSep1($.mime),
-    disposition: ($) => $._string,
-    attachments_directive: ($) =>
+    _mime_types: $ => repeat1($.mime_type),
+    _mimes: $ => repeat1($.mime),
+    disposition: $ => $._string,
+    attachments_directive: $ =>
       command(
         $,
         "attachments",
@@ -139,7 +148,7 @@ module.exports = grammar({
           "?"
         )
       ),
-    unattachments_directive: ($) =>
+    unattachments_directive: $ =>
       command(
         $,
         "unattachments",
@@ -148,11 +157,11 @@ module.exports = grammar({
           "*"
         )
       ),
-    auto_view_directive: ($) => command($, "auto_view", $._mimes),
-    unauto_view_directive: ($) =>
+    auto_view_directive: $ => command($, "auto_view", $._mimes),
+    unauto_view_directive: $ =>
       command($, "unauto_view", choice("*", $._mimes)),
 
-    map: (_) =>
+    map: _ =>
       choice(
         "alias",
         "attach",
@@ -168,20 +177,20 @@ module.exports = grammar({
         "query",
         "smime"
       ),
-    _maps: ($) => commaSep1($.map),
-    function: (_) => /[a-z-]+/,
-    _functions: ($) => spaceSep1($.function),
-    bind_directive: ($) => command($, "bind", $._maps, $.key, $.function),
-    unbind_directive: ($) => command($, "unbind", choice("*", $._maps), $.key),
+    _maps: $ => commaSep1($.map),
+    function: _ => /[a-z-]+/,
+    _functions: $ => repeat1($.function),
+    bind_directive: $ => command($, "bind", $._maps, $.key, $.function),
+    unbind_directive: $ => command($, "unbind", choice("*", $._maps), $.key),
 
-    alias: ($) => $._string,
-    charset: ($) => $._string,
-    charset_hook_directive: ($) =>
+    alias: $ => $._string,
+    charset: $ => $._string,
+    charset_hook_directive: $ =>
       command($, "charset-hook", $.alias, $.charset),
-    iconv_hook_directive: ($) => command($, "iconv-hook", $.charset, $.charset),
+    iconv_hook_directive: $ => command($, "iconv-hook", $.charset, $.charset),
 
-    pattern: ($) => $._string,
-    object: (_) =>
+    pattern: $ => $._string,
+    object: _ =>
       choice(
         "attach_headers",
         "attachment",
@@ -223,7 +232,7 @@ module.exports = grammar({
         "sidebar_ordinary",
         "sidebar_spool_file"
       ),
-    composeobject: (_) =>
+    composeobject: _ =>
       choice(
         "header",
         "security_encrypt",
@@ -231,7 +240,7 @@ module.exports = grammar({
         "security_both",
         "security_none"
       ),
-    color: (_) =>
+    color: _ =>
       choice(
         "default",
         "black",
@@ -245,12 +254,12 @@ module.exports = grammar({
         /#\d{6}/,
         /color\d+/
       ),
-    attribute: (_) =>
+    attribute: _ =>
       choice("none", "bold", "underline", "reverse", "standout"),
-    _attributes: ($) => spaceSep1($.attribute),
-    foreground: ($) => $.color,
-    background: ($) => $.color,
-    color_directive: ($) =>
+    _attributes: $ => repeat1($.attribute),
+    foreground: $ => $.color,
+    background: $ => $.color,
+    color_directive: $ =>
       command(
         $,
         "color",
@@ -271,13 +280,13 @@ module.exports = grammar({
           )
         )
       ),
-    uncolor_directive: ($) =>
+    uncolor_directive: $ =>
       command($, "uncolor", $.pattern, choice("*", $.pattern)),
 
-    keyid: ($) => $._string,
-    crypt_hook_directive: ($) => command($, "crypt-hook", $._regex, $.keyid),
-    name: ($) => $._string,
-    index_format_hook_directive: ($) =>
+    keyid: $ => $._string,
+    crypt_hook_directive: $ => command($, "crypt-hook", $._regex, $.keyid),
+    name: $ => $._string,
+    index_format_hook_directive: $ =>
       command(
         $,
         "index-format-hook",
@@ -287,131 +296,131 @@ module.exports = grammar({
         $._string
       ),
 
-    exec_directive: ($) => command($, "exec", $._functions),
-    fcc_save_hook_directive: ($) =>
+    exec_directive: $ => command($, "exec", $._functions),
+    fcc_save_hook_directive: $ =>
       command($, "fcc-save-hook", $.pattern, $.mailbox),
-    fcc_hook_directive: ($) => command($, "fcc-hook", $.pattern, $.mailbox),
-    save_hook_directive: ($) => command($, "save-hook", $.pattern, $.mailbox),
-    folder_hook_directive: ($) =>
+    fcc_hook_directive: $ => command($, "fcc-hook", $.pattern, $.mailbox),
+    save_hook_directive: $ => command($, "save-hook", $.pattern, $.mailbox),
+    folder_hook_directive: $ =>
       command(
         $,
         "folder-hook",
         optional(alias("-noregex", $.command_line_option)),
         $._regex,
-        $._command
+        $._statement
       ),
 
-    _rx_addr: ($) =>
+    _rx_addr: $ =>
       choice(
         seq(alias("-rx", $.command_line_option), $._regexes),
         seq(alias("-addr", $.command_line_option), $._addresses)
       ),
-    group_directive: ($) => command($, "group", optional($._group), $._rx_addr),
-    ungroup_directive: ($) =>
+    group_directive: $ => command($, "group", optional($._group), $._rx_addr),
+    ungroup_directive: $ =>
       command($, "ungroup", optional($._group), choice("*", $._rx_addr)),
 
-    header: ($) => $._string,
-    _headers: ($) => spaceSep1($.header),
-    hdr_order_directive: ($) => command($, "hdr_order", $._headers),
-    unhdr_order_directive: ($) =>
+    header: $ => $._string,
+    _headers: $ => repeat1($.header),
+    hdr_order_directive: $ => command($, "hdr_order", $._headers),
+    unhdr_order_directive: $ =>
       command($, "unhdr_order", choice("*", $._headers)),
 
-    symbol: ($) => $._string,
-    ifdef_directive: ($) => command($, "ifdef", $.symbol, $._command),
-    ifndef_directive: ($) => command($, "ifndef", $.symbol, $._command),
-    finish_directive: ($) => command($, "finish"),
+    symbol: $ => $._string,
+    ifdef_directive: $ => command($, "ifdef", $.symbol, $._statement),
+    ifndef_directive: $ => command($, "ifndef", $.symbol, $._statement),
+    finish_directive: $ => command($, "finish"),
 
-    _strings: ($) => spaceSep1($._string),
-    ignore_directive: ($) => command($, "ignore", $._strings),
-    unignore_directive: ($) => command($, "unignore", choice("*", $._strings)),
+    _strings: $ => repeat1($._string),
+    ignore_directive: $ => command($, "ignore", $._strings),
+    unignore_directive: $ => command($, "unignore", choice("*", $._strings)),
 
-    lists_directive: ($) => command($, "lists", $._group, $._regexes),
-    unlists_directive: ($) =>
+    lists_directive: $ => command($, "lists", $._group, $._regexes),
+    unlists_directive: $ =>
       command($, "unlists", $._group, choice("*", $._regexes)),
-    subscribe_directive: ($) => command($, "subscribe", $._group, $._regexes),
-    unsubscribe_directive: ($) =>
+    subscribe_directive: $ => command($, "subscribe", $._group, $._regexes),
+    unsubscribe_directive: $ =>
       command($, "unsubscribe", $._group, choice("*", $._regexes)),
 
-    sequence: ($) => $._string,
-    macro_directive: ($) => command($, "macro", $._maps, $.key, $.sequence, optional($.description)),
-    unmacro_directive: ($) =>
+    sequence: $ => $._string,
+    macro_directive: $ => command($, "macro", $._maps, $.key, $.sequence, optional($.description)),
+    unmacro_directive: $ =>
       command($, "unmacro", choice("*", $._maps), $.key),
 
-    mailbox: ($) => $._string,
-    _mailboxes: ($) => spaceSep1($.mailbox),
-    description: ($) => $._string,
-    mailboxes_directive: ($) => command($, "mailboxes", $._mailboxes),
-    named_mailboxes_directive: ($) =>
-      command($, "named-mailboxes", spaceSep1(seq($.description, $.mailbox))),
-    unmailboxes_directive: ($) =>
+    mailbox: $ => $._string,
+    _mailboxes: $ => repeat1($.mailbox),
+    description: $ => $._string,
+    mailboxes_directive: $ => command($, "mailboxes", $._mailboxes),
+    named_mailboxes_directive: $ =>
+      command($, "named-mailboxes", repeat1(seq($.description, $.mailbox))),
+    unmailboxes_directive: $ =>
       command($, "unmailboxes", choice("*", $._mailboxes)),
 
-    header_field: ($) => $._string,
-    _header_fields: ($) => spaceSep1($.header_field),
-    mailto_allow_directive: ($) =>
+    header_field: $ => $._string,
+    _header_fields: $ => repeat1($.header_field),
+    mailto_allow_directive: $ =>
       command($, "mailto_allow", choice("*", $._header_fields)),
-    unmailto_allow_directive: ($) =>
+    unmailto_allow_directive: $ =>
       command($, "unmailto_allow", choice("*", $._header_fields)),
 
-    message: ($) => $._string,
-    echo_directive: ($) => command($, "echo", $.message),
-    directory: ($) => $._string,
-    cd_directive: ($) => command($, "cd", $.directory),
+    message: $ => $._string,
+    echo_directive: $ => command($, "echo", $.message),
+    directory: $ => $._string,
+    cd_directive: $ => command($, "cd", $.directory),
 
-    mbox_hook_directive: ($) =>
+    mbox_hook_directive: $ =>
       command($, "mbox-hook", optional("-noregex"), $._regex, $.mailbox),
-    message_hook_directive: ($) =>
-      command($, "message-hook", $.pattern, $._command),
+    message_hook_directive: $ =>
+      command($, "message-hook", $.pattern, $._statement),
 
-    mime_lookup_directive: ($) => command($, "mime_lookup", $._mimes),
-    unmime_lookup_directive: ($) =>
+    mime_lookup_directive: $ => command($, "mime_lookup", $._mimes),
+    unmime_lookup_directive: $ =>
       command($, "unmime_lookup", choice("*", $._mimes)),
-    mono_directive: ($) =>
+    mono_directive: $ =>
       command($, "mono", choice($.object, $.pattern), $.attribute, $._regex),
-    unmono_directive: ($) =>
+    unmono_directive: $ =>
       command($, "unmono", $.pattern, choice("*", $.pattern)),
-    my_hdr_directive: ($) => command($, "my_hdr", $._string),
-    unmy_hdr_directive: ($) =>
+    my_hdr_directive: $ => command($, "my_hdr", $._string),
+    unmy_hdr_directive: $ =>
       command($, "unmy_hdr", choice("*", $.header_field)),
 
-    shell_command: ($) => choice(
-        quoted_string("'", $.shell),
-        quoted_string('"', $.shell),
-        quoted_string("`", $.shell),
-        alias($._word, $.shell),
-      ),
-    open_hook_directive: ($) =>
-      command($, "open-hook", $._regex, $.shell_command),
-    close_hook_directive: ($) =>
-      command($, "close-hook", $._regex, $.shell_command),
-    append_hook_directive: ($) =>
-      command($, "append-hook", $._regex, $.shell_command),
+    shell_statement: $ => choice(
+      quoted_string("'", $.shell),
+      quoted_string('"', $.shell),
+      quoted_string("`", $.shell),
+      alias($._word, $.shell),
+    ),
+    open_hook_directive: $ =>
+      command($, "open-hook", $._regex, $.shell_statement),
+    close_hook_directive: $ =>
+      command($, "close-hook", $._regex, $.shell_statement),
+    append_hook_directive: $ =>
+      command($, "append-hook", $._regex, $.shell_statement),
 
-    push_directive: ($) => command($, "push", $._string),
+    push_directive: $ => command($, "push", $._string),
 
-    reply_hook_directive: ($) =>
-      command($, "reply-hook", $.pattern, $._command),
-    send_hook_directive: ($) => command($, "send-hook", $.pattern, $._command),
-    send2_hook_directive: ($) =>
-      command($, "send2-hook", $.pattern, $._command),
+    reply_hook_directive: $ =>
+      command($, "reply-hook", $.pattern, $._statement),
+    send_hook_directive: $ => command($, "send-hook", $.pattern, $._statement),
+    send2_hook_directive: $ =>
+      command($, "send2-hook", $.pattern, $._statement),
 
-    format: ($) => $._string,
-    spam_directive: ($) => command($, "spam", $._regex, $.format),
-    nospam_directive: ($) => command($, "nospam", choice("*", $._regex)),
-    replacement: ($) => $._string,
-    subjectrx_directive: ($) =>
+    format: $ => $._string,
+    spam_directive: $ => command($, "spam", $._regex, $.format),
+    nospam_directive: $ => command($, "nospam", choice("*", $._regex)),
+    replacement: $ => $._string,
+    subjectrx_directive: $ =>
       command($, "subjectrx", $._regex, $.replacement),
-    unsubjectrx_directive: ($) =>
+    unsubjectrx_directive: $ =>
       command($, "unsubjectrx", choice("*", $._regex)),
-    uri: ($) => $._string,
-    subscribe_to_directive: ($) => command($, "subscribe-to", $.uri),
-    unsubscribe_from_directive: ($) => command($, "unsubscribe-from", $.uri),
+    uri: $ => $._string,
+    subscribe_to_directive: $ => command($, "subscribe-to", $.uri),
+    unsubscribe_from_directive: $ => command($, "unsubscribe-from", $.uri),
 
-    timeout_hook_directive: ($) => command($, "timeout-hook", $._command),
-    startup_hook_directive: ($) => command($, "startup-hook", $._command),
-    shutdown_hook_directive: ($) => command($, "shutdown-hook", $._command),
+    timeout_hook_directive: $ => command($, "timeout-hook", $._statement),
+    startup_hook_directive: $ => command($, "startup-hook", $._statement),
+    shutdown_hook_directive: $ => command($, "shutdown-hook", $._statement),
 
-    hook_type: (_) =>
+    hook_type: _ =>
       choice(
         "account-hook",
         "charset-hook",
@@ -432,64 +441,61 @@ module.exports = grammar({
         "startup-hook",
         "shutdown-hook"
       ),
-    unhook_directive: ($) => command($, "unhook", choice("*", $.hook_type)),
+    unhook_directive: $ => command($, "unhook", choice("*", $.hook_type)),
 
-    set_directive: ($) => command($, "set", choice($._options2, $._options3)),
-    _options3: ($) =>
-      spaceSep1(
-        seq(
-          $.option,
-          optional(" "),
-          choice("+=", "-=", "="),
-          optional(" "),
-          choice($.int, $.quadoption, $._string)
-        )
+    set_directive: $ => command($, "set", repeat1(choice(
+      seq(
+        optional(choice("&", "?")),
+        $.option,
       ),
-    _options2: ($) => spaceSep1(seq(optional(choice("&", "?")), $.option)),
-    _options: ($) => spaceSep1($.option),
-    unset_directive: ($) => command($, "unset", $._options),
-    reset_directive: ($) => command($, "reset", $._options),
-    toggle_directive: ($) => command($, "toggle", $._options),
+      seq(
+        $.option,
+        optional(seq(
+          choice("+=", "-=", "="),
+          choice($.int, $.quadoption, $._string))
+        ))
+    ))),
+    _options: $ => repeat1($.option),
+    unset_directive: $ => command($, "unset", $._options),
+    reset_directive: $ => command($, "reset", $._options),
+    toggle_directive: $ => command($, "toggle", $._options),
 
-    setenv_directive: ($) =>
+    setenv_directive: $ =>
       command(
         $,
         "setenv",
         choice(seq("?", $.option), seq($.option, alias(/\S+/, $.value)))
       ),
-    unsetenv_directive: ($) => command($, "unsetenv", $.option),
-    sidebar_pin_directive: ($) => command($, "sidebar_pin", $._mailboxes),
-    sidebar_unpin_directive: ($) =>
+    unsetenv_directive: $ => command($, "unsetenv", $.option),
+    sidebar_pin_directive: $ => command($, "sidebar_pin", $._mailboxes),
+    sidebar_unpin_directive: $ =>
       command($, "sidebar_unpin", choice("*", $._mailboxes)),
-    score_directive: ($) => command($, "score", $.pattern, $.int),
-    unscore_directive: ($) => command($, "unscore", choice("*", $.pattern)),
+    score_directive: $ => command($, "score", $.pattern, $.int),
+    unscore_directive: $ => command($, "unscore", choice("*", $.pattern)),
+    source_directive: $ => command($, "source", alias($._string, $.path)),
 
-    option: (_) => /[a-z_\d]+/,
+    option: _ => /[a-z_\d]+/,
 
-    quadoption: (_) => choice("yes", "no", "ask-yes", "ask-no"),
-    int: (_) => /-?\d+/,
-    _string: ($) =>
+    quadoption: _ => choice("yes", "no", "ask-yes", "ask-no"),
+    int: _ => /-?\d+/,
+    _string: $ =>
       choice(
         quoted_string("'", $.string),
         quoted_string('"', $.string),
         quoted_string("`", $.shell),
         alias($._word, $.string),
       ),
-    _regex: ($) =>
+    _regex: $ =>
       choice(
         quoted_string("'", $.regex),
         quoted_string('"', $.regex),
         quoted_string("`", $.shell),
         alias($._word, $.regex),
       ),
-    _word: (_) => /(\\\r?\n|[^"'`\s])(\S|\\\s)*/,
+    _word: _ => /([^"'`#;\s]|\\.)+/,
 
-    source_directive: ($) => command($, "source", alias($._string, $.path)),
-
-    comment: (_) => /#[^\n]*/,
-    _eol: (_) => /\r?\n/,
-    _space: (_) => prec(-1, repeat1(/[ \t]/)),
-    _end: ($) => seq(optional($._space), optional($.comment), $._eol),
+    comment: _ => seq('#', /[^\n]*/),
+    _terminator: _ => choice(';', /\n/),
   },
 });
 
@@ -497,16 +503,8 @@ function command($, cmd, ...args) {
   return seq(alias(cmd, $.command), ...args);
 }
 
-function sep1(rule, separator) {
-  return seq(rule, repeat(seq(separator, rule)));
-}
-
 function commaSep1(rule) {
-  return sep1(rule, ",");
-}
-
-function spaceSep1(rule) {
-  return sep1(rule, " ");
+  return seq(rule, repeat(seq(token.immediate(","), rule)));
 }
 
 function quoted_string(char, name) {

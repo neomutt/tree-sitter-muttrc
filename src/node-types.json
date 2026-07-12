@@ -545,7 +545,7 @@
           "named": true
         },
         {
-          "type": "shell_command",
+          "type": "shell_statement",
           "named": true
         }
       ]
@@ -744,7 +744,7 @@
           "named": true
         },
         {
-          "type": "shell_command",
+          "type": "shell_statement",
           "named": true
         }
       ]
@@ -808,6 +808,12 @@
         }
       ]
     }
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "extra": true,
+    "fields": {}
   },
   {
     "type": "composeobject",
@@ -1081,10 +1087,6 @@
         },
         {
           "type": "color_directive",
-          "named": true
-        },
-        {
-          "type": "comment",
           "named": true
         },
         {
@@ -1837,36 +1839,6 @@
         },
         {
           "type": "regex",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "group_name",
-    "named": true,
-    "fields": {
-      "content": {
-        "multiple": false,
-        "required": false,
-        "types": [
-          {
-            "type": "shell",
-            "named": true
-          },
-          {
-            "type": "string",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": false,
-      "types": [
-        {
-          "type": "string",
           "named": true
         }
       ]
@@ -3597,7 +3569,7 @@
           "named": true
         },
         {
-          "type": "shell_command",
+          "type": "shell_statement",
           "named": true
         }
       ]
@@ -4938,7 +4910,7 @@
     }
   },
   {
-    "type": "shell_command",
+    "type": "shell_statement",
     "named": true,
     "fields": {
       "content": {
@@ -6868,15 +6840,15 @@
     }
   },
   {
-    "type": " ",
-    "named": false
-  },
-  {
     "type": "!",
     "named": false
   },
   {
     "type": "\"",
+    "named": false
+  },
+  {
+    "type": "#",
     "named": false
   },
   {
@@ -6917,6 +6889,10 @@
   },
   {
     "type": "/",
+    "named": false
+  },
+  {
+    "type": ";",
     "named": false
   },
   {
@@ -7008,10 +6984,6 @@
     "named": true
   },
   {
-    "type": "comment",
-    "named": true
-  },
-  {
     "type": "compose",
     "named": false
   },
@@ -7058,6 +7030,10 @@
   {
     "type": "green",
     "named": false
+  },
+  {
+    "type": "group_name",
+    "named": true
   },
   {
     "type": "hdrdefault",

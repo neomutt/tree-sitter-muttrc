@@ -53,3 +53,9 @@
   "?"
   "*"
 ] @character.special
+
+[
+  "="
+  "+="
+  "-="
+] @operator
