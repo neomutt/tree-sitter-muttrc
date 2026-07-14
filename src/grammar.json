@@ -1360,7 +1360,7 @@
         },
         {
           "type": "PATTERN",
-          "value": "color\\d+"
+          "value": "(bright)?color\\d+"
         }
       ]
     },

@@ -38,6 +38,7 @@ if modrev == 'scm' or modrev == 'dev' then
 end
 
 build = {
+  copy_directories = { "conf" },
   type = "treesitter-parser",
   lang = "muttrc",
 }

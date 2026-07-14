@@ -252,7 +252,7 @@ module.exports = grammar({
         "cyan",
         "white",
         /#\d{6}/,
-        /color\d+/
+        /(bright)?color\d+/
       ),
     attribute: _ =>
       choice("none", "bold", "underline", "reverse", "standout"),
