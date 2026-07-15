@@ -40,56 +40,14 @@
 
 [![Crates.io (recent)](https://img.shields.io/crates/dr/tree-sitter-muttrc)](https://crates.io/crates/tree-sitter-muttrc)
 
+[![luarocks](https://img.shields.io/luarocks/v/Freed-Wu/tree-sitter-muttrc)](https://luarocks.org/modules/Freed-Wu/tree-sitter-muttrc)
+
 [(neo)muttrc grammar](https://neomutt.org/man/neomuttrc) for
 [tree-sitter](https://github.com/tree-sitter/tree-sitter).
 
-It can be used by:
-
-- Syntax highlight
-  - editors
-    - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): for
-      [neovim](https://github.com/neovim/neovim)
-    - [tree-sitter-langs](https://github.com/emacs-tree-sitter/tree-sitter-langs):
-      for [emacs](https://www.gnu.org/software/emacs/)
-    - [kak-tree-sitter](https://github.com/phaazon/kak-tree-sitter): for
-      [kakoune](https://kakoune.org/)
-    - [helix](https://helix-editor.com/)
-    - [zed](https://zed.dev)
-    - [atom](https://github.com/atom/atom)
-    - [syntax-highlighter](https://github.com/EvgeniyPeshkov/syntax-highlighter):
-      for [VS Code](https://github.com/microsoft/vscode)
-  - pagers
-    - [syncat](https://github.com/foxfriends/syncat)
-    - [`tree-sitter highlight`](https://tree-sitter.github.io/tree-sitter/syntax-highlighting):
-      Make sure `/the/parent/directory/of/this/repo` in `parser-directories` of
-      your `~/.config/tree-sitter/config.json`
-- Language servers
-  - [muttrc-language-server](https://github.com/neomutt/mutt-language-server)
-  - [vscode-anycode](https://github.com/microsoft/vscode-anycode)
-  - [Navigating code on GitHub](https://docs.github.com/en/repositories/working-with-files/using-files/navigating-code-on-github):
-    supported by [semantic](https://github.com/github/semantic)
-- Libraries
-  - [tree-sitter-muttrc](https://www.npmjs.com/package/tree-sitter-muttrc):
-    for node
-  - [tree-sitter-muttrc](https://crates.io/crates/tree-sitter-muttrc):
-    for rust
-  - [tree-sitter-muttrc](https://pypi.org/project/tree-sitter-muttrc):
-    for python
-  - [tree-sitter-languages](https://github.com/grantjenks/py-tree-sitter-languages):
-    for python
+If you don't want to install nodejs to generate `src/grammar.json`,
+use [release](https://github.com/neomutt/tree-sitter-muttrc/tree/release).
 
 ## Optional Dependencies
 
 - [tree-sitter-expando](https://github.com/neomutt/tree-sitter-expando)
-
-Before:
-
-![before](https://github.com/user-attachments/assets/f6d79eef-3281-4be6-8697-83f15f6d1c91)
-
-After:
-
-![after](https://github.com/user-attachments/assets/5bc78d28-b944-455b-a68e-36f2ceccdb81)
-
-## Related Projects
-
-- [neomutt.vim](https://github.com/neomutt/neomutt.vim): vim syntax
