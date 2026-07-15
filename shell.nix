@@ -7,5 +7,8 @@ mkShell {
   name = "tree-sitter-muttrc";
   buildInputs = [
     tree-sitter
+    bun
+    cargo
+    uv
   ];
 }

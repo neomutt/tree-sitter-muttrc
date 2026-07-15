@@ -41,4 +41,5 @@ build = {
   copy_directories = { "conf" },
   type = "treesitter-parser",
   lang = "muttrc",
+  generate = true,
 }
