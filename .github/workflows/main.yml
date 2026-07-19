@@ -137,7 +137,7 @@ jobs:
       - run: |
           luarocks install tree-sitter-muttrc
           luarocks pack tree-sitter-muttrc
-          scripts/update.sh ./*.rock
+          scripts/upload.sh ./*.rock
         env:
           LUAROCKS_API_KEY: ${{secrets.LUAROCKS_API_KEY}}
         if: startsWith(github.ref, 'refs/tags/')
@@ -154,7 +154,7 @@ jobs:
       - run: |
           luarocks install tree-sitter-muttrc
           luarocks pack tree-sitter-muttrc
-          scripts/update.sh ./*.rock
+          scripts/upload.sh ./*.rock
         env:
           LUAROCKS_API_KEY: ${{secrets.LUAROCKS_API_KEY}}
 
