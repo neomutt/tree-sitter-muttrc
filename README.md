@@ -46,7 +46,7 @@
 [tree-sitter](https://github.com/tree-sitter/tree-sitter).
 
 If you don't want to install nodejs to generate `src/grammar.json`,
-use [release](https://github.com/neomutt/tree-sitter-muttrc/tree/release).
+use branch [main](https://github.com/neomutt/tree-sitter-muttrc/tree/main).
 
 ## Optional Dependencies
 
