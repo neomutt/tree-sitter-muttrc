@@ -45,9 +45,20 @@
 [(neo)muttrc grammar](https://neomutt.org/man/neomuttrc) for
 [tree-sitter](https://github.com/tree-sitter/tree-sitter).
 
-If you don't want to install nodejs to generate `src/grammar.json`,
-use branch [main](https://github.com/neomutt/tree-sitter-muttrc/tree/main).
+Created for [mutt-language-server](https://github.com/neomutt/mutt-language-server).
 
-## Optional Dependencies
+## Usage
 
-- [tree-sitter-expando](https://github.com/neomutt/tree-sitter-expando)
+### [rocks.nvim](https://github.com/lumen-oss/rocks.nvim)
+
+```toml
+[plugins]
+"rocks-config.nvim" = "VERSION"
+tree-sitter-muttrc = "VERSION"
+# optional
+tree-sitter-expando = "VERSION"
+```
+
+### [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter/)
+
+Use branch [main](https://github.com/neomutt/tree-sitter-muttrc/tree/main).
