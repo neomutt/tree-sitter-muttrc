@@ -52,6 +52,9 @@ Created for [mutt-language-server](https://github.com/neomutt/mutt-language-serv
 ### [rocks.nvim](https://github.com/lumen-oss/rocks.nvim)
 
 ```toml
+[treesitter]
+auto_highlight = "all"
+
 [plugins]
 "rocks-config.nvim" = "VERSION"
 tree-sitter-muttrc = "VERSION"
