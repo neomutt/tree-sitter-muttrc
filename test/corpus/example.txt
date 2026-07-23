@@ -5,7 +5,8 @@ comment: start of line
 
 ---
 (file
-  (comment))
+  (comment
+    (body)))
 
 =======
 Bind
