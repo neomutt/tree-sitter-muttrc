@@ -26,5 +26,6 @@
   (#eq? @_option "signature")
   (#match? @_content "\\|$"))
 
-((comment) @injection.content
+(comment
+  (body) @injection.content
   (#set! injection.language "comment"))

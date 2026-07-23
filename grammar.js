@@ -494,7 +494,7 @@ module.exports = grammar({
       ),
     _word: _ => /([^"'`#;\s]|\\.)+/,
 
-    comment: _ => seq('#', /[^\n]*/),
+    comment: $ => seq('#', alias(/[^\n]*/, $.body)),
     _terminator: _ => choice(';', /\n/),
   },
 });
