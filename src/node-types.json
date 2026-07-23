@@ -813,7 +813,17 @@
     "type": "comment",
     "named": true,
     "extra": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "body",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "composeobject",
@@ -6958,6 +6968,10 @@
   {
     "type": "body",
     "named": false
+  },
+  {
+    "type": "body",
+    "named": true
   },
   {
     "type": "bold",

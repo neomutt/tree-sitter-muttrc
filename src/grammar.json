@@ -3714,8 +3714,13 @@
           "value": "#"
         },
         {
-          "type": "PATTERN",
-          "value": "[^\\n]*"
+          "type": "ALIAS",
+          "content": {
+            "type": "PATTERN",
+            "value": "[^\\n]*"
+          },
+          "named": true,
+          "value": "body"
         }
       ]
     },

@@ -555,7 +555,7 @@ static const char * const ts_symbol_names[] = {
   [sym_int] = "int",
   [sym__word] = "shell",
   [anon_sym_POUND] = "#",
-  [aux_sym_comment_token1] = "comment_token1",
+  [aux_sym_comment_token1] = "body",
   [anon_sym_SEMI] = ";",
   [aux_sym__terminator_token1] = "_terminator_token1",
   [sym_file] = "file",
@@ -1801,8 +1801,8 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = false,
   },
   [aux_sym_comment_token1] = {
-    .visible = false,
-    .named = false,
+    .visible = true,
+    .named = true,
   },
   [anon_sym_SEMI] = {
     .visible = true,
@@ -27407,7 +27407,7 @@ TS_PUBLIC const TSLanguage *tree_sitter_muttrc(void) {
     .metadata = {
       .major_version = 0,
       .minor_version = 1,
-      .patch_version = 1,
+      .patch_version = 2,
     },
   };
   return &language;
