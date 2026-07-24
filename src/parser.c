@@ -10048,7 +10048,8 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 1511:
       ACCEPT_TOKEN(aux_sym_comment_token1);
-      if (('\t' <= lookahead && lookahead <= '\r') ||
+      if (lookahead == '\t' ||
+          lookahead == 0x0b ||
           lookahead == ' ') ADVANCE(1511);
       END_STATE();
     case 1512:
@@ -27372,7 +27373,7 @@ TS_PUBLIC const TSLanguage *tree_sitter_muttrc(void) {
     .metadata = {
       .major_version = 0,
       .minor_version = 1,
-      .patch_version = 3,
+      .patch_version = 4,
     },
   };
   return &language;
