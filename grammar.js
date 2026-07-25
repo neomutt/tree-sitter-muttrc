@@ -476,6 +476,8 @@ module.exports = grammar({
 
     option: _ => /[a-z_\d]+/,
 
+    quadoption: _ => choice("yes", "no", "ask-yes", "ask-no"),
+    int: _ => /-?\d+/,
     _string: $ =>
       choice(
         quoted_string("'", $.string),
@@ -491,8 +493,6 @@ module.exports = grammar({
         alias($._word, $.regex),
       ),
     _word: _ => /([^"'`#;\s]|\\.)+/,
-    quadoption: _ => choice("yes", "no", "ask-yes", "ask-no"),
-    int: _ => /-?\d+/,
 
     comment: $ => seq('#', /[ \t\v]*/, alias(/[^\n]*/, $.body)),
     _terminator: _ => choice(';', /\n/),
