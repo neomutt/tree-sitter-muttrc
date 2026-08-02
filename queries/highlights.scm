@@ -21,6 +21,11 @@
 
 (path) @string.special.path
 
+(set_directive
+  (option) @_option
+  (string) @string.special.path
+  (#any-of? @_option "history_file" "header_cache" "attach_save_dir" "message_cache_dir"))
+
 (regex) @string.regexp
 
 (option) @variable
