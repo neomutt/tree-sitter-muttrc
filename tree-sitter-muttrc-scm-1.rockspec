@@ -1,45 +1,20 @@
-local git_ref = '$git_ref'
-local modrev = '$modrev'
-local specrev = '$specrev'
-
-local repo_url = '$repo_url'
-
 rockspec_format = '3.0'
-package = '$package'
-if modrev:sub(1, 1) == '$' then
-  modrev = "scm"
-  specrev = "1"
-  repo_url = "https://github.com/neomutt/tree-sitter-muttrc"
-  package = repo_url:match("/([^/]+)/?$")
-end
-version = modrev ..'-'.. specrev
-
 description = {
-  summary = '$summary',
+  summary = '',
   detailed = '',
-  labels = { 'tree-sitter' },
-  homepage = '$homepage',
+  labels = {},
+  homepage = 'https://github.com/neomutt/tree-sitter-muttrc',
   license = 'MIT',
 }
-
-dependencies = { "lua >= 5.1" }
-
-test_dependencies = {}
-
+package = description.homepage:match('/([^/]+)/?$')
+version = 'scm-1'
 source = {
-  url = repo_url .. '/archive/' .. git_ref .. '.zip',
-  dir = '$repo_name-' .. '$archive_dir_suffix',
+  url = description.homepage:gsub('https', 'git')
 }
 
-if modrev == 'scm' or modrev == 'dev' then
-  source = {
-    url = repo_url:gsub('https', 'git')
-  }
-end
-
 build = {
-  copy_directories = { "conf" },
   type = "treesitter-parser",
   lang = "muttrc",
   generate = true,
+  copy_directories = { "conf" },
 }
