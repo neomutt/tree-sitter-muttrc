@@ -15,6 +15,9 @@ permissions:
   contents: write
   id-token: write
 
+env:
+  NODE_VERSION: "26"
+
 jobs:
   test:
     runs-on: macos-latest
@@ -88,8 +91,7 @@ jobs:
 
   npm:
     needs: test
-    if: startsWith(github.ref, 'refs/tags/')
-    uses: Freed-Wu/workflows/.github/workflows/package-npm.yml@master
+    uses: Freed-Wu/workflows/.github/workflows/package-npm.yml@init
     with:
       init: true
       generate: true
